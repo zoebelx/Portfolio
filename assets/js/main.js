@@ -121,10 +121,10 @@ const PROJETS = [
     date: "En cours",
     titre: "Emotism",
     accroche:
-      "Un jeu en cours de création pour aider les personnes autistes à gérer leurs émotions.",
+      "Un jeu en cours de création pour aider les personnes avec un TSA à gérer leurs émotions.",
     faits: [
       "Projet transpromotionnel à l’ENSC : quatre étudiants de première année et quatre de deuxième année.",
-      "Concevoir un jeu vidéo pour aider les personnes autistes à mieux gérer leurs émotions.",
+      "Concevoir un jeu vidéo pour aider les personnes avec un TSA à mieux gérer leurs émotions.",
       "Je développe le code du jeu sur Unity et participe à la gestion du projet ainsi qu’aux retours de séance.",
       "Des échanges avec des professionnels nous aident à comprendre l’autisme et les difficultés rencontrées par les personnes concernées.",
     ],
