@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Zinzin — Un jeu d’exploration dans le terminal</title>
+    <link rel="icon" href="../assets/images/IconePage.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="../assets/css/zinzin.css" />
+    <link rel="stylesheet" href="../assets/css/project-universes.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/project-navigation.css" />
+    <link rel="stylesheet" href="../assets/css/zinzin-shared.css?v=carousel-4" />
+    <script src="../assets/js/accessibility.js"></script>
+    <meta
+      name="description"
+      content="Zinzin : jeu C# en console, conception d’interface et démo jouable."
+    />
+    <meta
+      property="og:title"
+      content="Zinzin — Un jeu d’exploration dans le terminal"
+    />
+    <meta
+      property="og:description"
+      content="Zinzin : jeu C# en console, conception d’interface et démo jouable."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Image relative tant que l'adresse publique du portfolio n'est pas configuree. -->
+    <meta property="og:image" content="../assets/images/social/zinzin.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Zinzin, jeu C# en console" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="../assets/images/social/zinzin.jpg" />
+  </head>
+  <body data-project="zinzin">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <main id="main-content" tabindex="-1" class="wrap project-page zinzin-page">
+      <div class="preview-sticky">
+        <a class="back-link" href="../index.html#projets" aria-label="Retour aux projets">← Projets</a>
+      <nav class="preview-nav" aria-label="Dans ce projet"><a href="#apercu">Le projet</a><a href="#interface">Ma contribution</a><a href="#concept">Le vaisseau</a><a href="#demo">La démo</a></nav>
+        <details class="comfort" id="comfort">
+          <summary>Confort de lecture</summary>
+          <div class="panel">
+            <button
+              class="toggle"
+              id="t-theme"
+              type="button"
+              aria-pressed="false"
+            >
+              Thème sombre
+            </button>
+            <button
+              class="toggle"
+              id="t-big"
+              type="button"
+              aria-pressed="false"
+            >
+              Texte plus grand
+            </button>
+            <button
+              class="toggle"
+              id="t-calm"
+              type="button"
+              aria-pressed="false"
+            >
+              Moins d'animations
+            </button>
+          </div>
+        </details>
+      </div>
+      <header class="project-heading z-hero" id="apercu">
+        <div class="z-project-band"><span>École · ENSC · Projet en binôme</span><span>C# · 2026</span></div>
+        <div>
+          <h1>Zinzin<br /><span>Clé du Vaisseau</span></h1>
+          <p class="project-subtitle">
+            Dix étages. Une clé. Dix minutes pour s’échapper.
+          </p>
+          <p>
+            Explorez un vaisseau dans le terminal, fouillez ses modules et
+            retrouvez le bon poste de pilotage.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#demo">Essayer la démo ↓</a>
+          </div>
+        </div>
+        <figure class="z-hero-shot">
+          <a href="../assets/images/zinzin/Capture_Jeu.png" data-z-shot title="Agrandir la capture"
+            ><img
+              src="../assets/images/zinzin/Capture_Jeu.png"
+              alt="Salle des machines du jeu original : moteurs, couloirs et téléporteurs rouge et bleu"
+              width="862"
+              height="907"
+            /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+          >
+          <figcaption>Le jeu original, entièrement dans la console.</figcaption>
+        </figure>
+      </header>
+      <div class="z-route">
+        <div class="z-chapter" data-route="interface">
+          <span class="z-route-marker" aria-hidden="true">01</span>
+          <section
+            class="project-section"
+            id="interface"
+            aria-labelledby="zinzin-role"
+          >
+            <p class="project-eyebrow">
+              Mon travail · Développement C# et interface
+            </p>
+            <h2 id="zinzin-role">Développer le jeu et son interface</h2>
+            <div class="z-work-summary">
+              <div>
+                <p>
+                  Au sein du binôme, j’ai développé le
+                  <strong>changement d’étage</strong>, l’interface et la
+                  <strong>carte interactive</strong>, ainsi que l’actualisation
+                  des interactions à proximité des objets et le
+                  <strong>classement final</strong>.
+                </p>
+                <p>
+                  La contrainte était de jouer dans la console. Avec
+                  Spectre.Console, j’ai cherché à organiser l’écran pour rendre
+                  l’exploration plus agréable et les informations plus faciles à
+                  suivre.
+                </p>
+              </div>
+              <figure class="z-interface-shot z-work-overview">
+                <a
+                  href="../assets/images/zinzin/Capture_ensembleJeu.png"
+                  data-z-shot title="Agrandir la capture"
+                  ><img
+                    src="../assets/images/zinzin/Capture_ensembleJeu.png"
+                    alt="Interface complète : aide et légende à gauche, vaisseau au centre, interactions et carte à droite"
+                    loading="lazy"
+                    width="2491"
+                    height="1262"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <figcaption>
+                  Au centre, le jeu ; autour, les repères pour suivre la
+                  mission.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="z-work-gallery" role="region" aria-label="Les choix d'interface" data-z-carousel="work">
+            <p class="z-places-hint">Faites d?filer les choix ou utilisez les fl?ches.</p>
+            <div class="z-work-choices" id="z-work-track">
+              <article>
+                <a
+                  href="../assets/images/zinzin/Capture_header.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-work-image"
+                  ><img
+                    src="../assets/images/zinzin/Capture_header.png"
+                    alt="Barre d’état du jeu original indiquant la clé, l’étage et le temps restant"
+                    loading="lazy"
+                    width="831"
+                    height="77"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <h3>Garder l’essentiel visible</h3>
+                  <p>
+                    Clé, étage et chronomètre sont regroupés dans une barre
+                    d’état : un seul endroit pour suivre la mission.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a
+                  href="../assets/images/zinzin/Capture_Interaction.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-work-image"
+                  ><img
+                    src="../assets/images/zinzin/Capture_Interaction.png"
+                    alt="Panneau d’interaction du téléporteur proposant les étages de destination"
+                    loading="lazy"
+                    width="378"
+                    height="497"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <h3>Montrer l’action au bon moment</h3>
+                  <p>
+                    Le panneau change selon l’objet à proximité. Ici, il permet
+                    de choisir la destination du téléporteur.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a
+                  href="../assets/images/zinzin/Capture_Carte.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-work-image"
+                  ><img
+                    src="../assets/images/zinzin/Capture_Carte.png"
+                    alt="Carte du vaisseau révélant une salle des machines parmi les étages encore inconnus"
+                    loading="lazy"
+                    width="387"
+                    height="419"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <h3>Accompagner l’exploration</h3>
+                  <p>
+                    La carte révèle les étages visités pour garder une trace du
+                    parcours dans le vaisseau.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="z-places-controls" hidden>
+              <button class="btn" type="button" id="z-work-prev" aria-label="Choix pr?c?dent" aria-controls="z-work-track">?</button>
+              <span id="z-work-position" role="status" aria-live="polite">1 / 3</span>
+              <button class="btn" type="button" id="z-work-next" aria-label="Choix suivant" aria-controls="z-work-track">?</button>
+            </div>
+            </div>
+          </section>
+
+          <section
+            class="project-section z-group-review"
+            aria-labelledby="z-review-title"
+          >
+            <p class="project-eyebrow">Notre ressenti · Bilan du binôme</p>
+            <h2 id="z-review-title">Passer de l’idée à un jeu concret</h2>
+            <p>
+              Nous avons particulièrement aimé donner vie à notre idée,
+              travailler le rendu visuel et appliquer la programmation objet à
+              un jeu jouable.
+            </p>
+            <div class="z-review-grid">
+              <div>
+                <h3>Ce que nous avons appris</h3>
+                <p>
+                  Développer un jeu complet en C#, relier ses différentes
+                  fonctionnalités et organiser une interface dans le terminal
+                  avec Spectre.Console.
+                </p>
+              </div>
+              <div>
+                <h3>Ce qui nous a manqué</h3>
+                <p>
+                  Du temps et davantage de connaissances en optimisation du code
+                  et en game design pour pousser le projet plus loin.
+                </p>
+              </div>
+              <div>
+                <h3>Ce qui nous donnerait envie de continuer</h3>
+                <p>
+                  Essayer de développer le jeu sur Unity et ajouter des
+                  perturbations pendant la partie pour enrichir l’expérience.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="z-chapter" data-route="concept">
+          <span class="z-route-marker" aria-hidden="true">02</span>
+          <section
+            class="project-section"
+            id="concept"
+            aria-labelledby="concept-title"
+          >
+            <p class="project-eyebrow">À bord du vaisseau</p>
+            <h2 id="concept-title">Explorer, fouiller, trouver la sortie</h2>
+            <p>
+              Des lieux de vie, des salles des machines et des postes de
+              pilotage : chaque étage réserve de nouvelles pistes.
+            </p>
+            <div class="z-places-gallery" data-z-carousel="places" role="region" aria-label="Les lieux du vaisseau">
+            <p class="z-places-hint">Faites défiler les lieux ou utilisez les flèches.</p>
+            <div class="z-discovery-grid" id="z-places-track">
+              <article>
+                <a
+                  href="../assets/images/zinzin/environnement-lieu-vie.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-discovery-image"
+                  ><img
+                    src="../assets/images/zinzin/environnement-lieu-vie.png"
+                    alt="Capture originale d’un lieu de vie : couchettes à gauche et coffres à droite"
+                    loading="lazy"
+                    width="432"
+                    height="482"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <p class="project-eyebrow">Fouiller</p>
+                  <h3>Les lieux de vie</h3>
+                  <p>
+                    Inspectez les couchettes et les coffres : la clé peut s’y
+                    cacher. Approchez-vous d’un objet et appuyez sur
+                    <kbd>A</kbd>.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a
+                  href="../assets/images/zinzin/environnement-machines.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-discovery-image"
+                  ><img
+                    src="../assets/images/zinzin/environnement-machines.png"
+                    alt="Capture originale d’une salle des machines avec ses moteurs et ses caisses"
+                    loading="lazy"
+                    width="431"
+                    height="485"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <p class="project-eyebrow">Explorer</p>
+                  <h3>Les salles des machines</h3>
+                  <p>
+                    Des moteurs et des caisses à examiner. Empruntez les
+                    téléporteurs pour poursuivre la recherche à un autre étage.
+                  </p>
+                </div>
+              </article>
+              <article>
+                <a
+                  href="../assets/images/zinzin/environnement-pilotage.png"
+                  data-z-shot title="Agrandir la capture"
+                  class="z-discovery-image"
+                  ><img
+                    src="../assets/images/zinzin/environnement-pilotage.png"
+                    alt="Capture originale d’un poste de pilotage avec ses commandes bleues et ses leviers"
+                    loading="lazy"
+                    width="429"
+                    height="489"
+                  /><span class="z-zoom-mark" aria-hidden="true">&#x2922;</span></a
+                >
+                <div>
+                  <p class="project-eyebrow">S’échapper</p>
+                  <h3>Les postes de pilotage</h3>
+                  <p>
+                    La clé en poche, retrouvez le bon levier pour redémarrer le
+                    vaisseau avant la fin du chronomètre.
+                  </p>
+                </div>
+              </article>
+            </div>
+            <div class="z-places-controls" hidden>
+              <button class="btn" type="button" id="z-places-prev" aria-label="Lieu précédent" aria-controls="z-places-track">←</button>
+              <span id="z-places-position" role="status" aria-live="polite">1 / 3</span>
+              <button class="btn" type="button" id="z-places-next" aria-label="Lieu suivant" aria-controls="z-places-track">→</button>
+            </div>
+            </div>
+          </section>
+        </div>
+        <div class="z-chapter" data-route="demo">
+          <span class="z-route-marker" aria-hidden="true">03</span>
+          <section
+            class="project-section z-demo-invite"
+            id="demo"
+            aria-labelledby="demo-title"
+          >
+            <div>
+              <p class="project-eyebrow">Prenez les commandes</p>
+              <h2 id="demo-title">À vous d’explorer</h2>
+              <p>
+                Trois étages, trois minutes : une adaptation web courte pour
+                découvrir le jeu.
+              </p>
+              <p class="method-note">
+                Le jeu C# original propose dix étages générés et un classement
+                local.
+              </p>
+            </div>
+            <button
+              class="btn primary"
+              type="button"
+              id="z-open"
+              aria-haspopup="dialog"
+            >
+              Lancer la démo ↗
+            </button>
+          </section>
+          <details
+            class="project-section z-leaderboard"
+            id="z-leaderboard-panel"
+          >
+            <summary>
+              Les meilleurs temps à bord <span>Top 10 local</span>
+            </summary>
+            <p>
+              Classement enregistré dans ce navigateur, séparé du jeu C#
+              original.
+            </p>
+            <p id="z-scores-empty">
+              Aucun temps enregistré. Terminez la démo pour établir le premier
+              record !
+            </p>
+            <ol id="z-scores" aria-label="Classement par temps croissant"></ol>
+          </details>
+          <section
+            class="project-section z-original"
+            aria-labelledby="original"
+          >
+            <h2 id="original">Envie de jouer à l’original ?</h2>
+            <a
+              class="btn"
+              href="../assets/documents/zinzin-sources.zip"
+              download
+              >Télécharger le projet C#</a
+            >
+            <details class="z-install">
+              <summary>Comment lancer le jeu sur mon ordinateur ?</summary>
+              <ol>
+                <li>Installez le SDK .NET 9, puis extrayez le ZIP.</li>
+                <li>
+                  Ouvrez un terminal dans le dossier <code>Code_C#</code> et
+                  lancez <code>dotnet run</code>.
+                </li>
+                <li>
+                  Utilisez un terminal d’au moins 140 colonnes sur 50 lignes,
+                  idéalement en plein écran.
+                </li>
+              </ol>
+              <p>
+                Le projet comprend un mode normal, un mode test et un classement
+                des dix meilleurs joueurs.
+              </p>
+            </details>
+            <p class="project-credits">
+              Projet réalisé par Jan de Greave et Zoé Schliefer Berlioux.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+    <dialog
+      id="zinzin-dialog"
+      class="zinzin-dialog"
+      aria-labelledby="zinzin-dialog-title"
+    >
+      <header class="zinzin-modal-header">
+        <h2 id="zinzin-dialog-title">Zinzin · Démo web</h2>
+        <button
+          class="btn"
+          type="button"
+          id="z-close"
+          aria-label="Fermer la démo"
+        >
+          ×
+        </button>
+      </header>
+      <div class="zinzin-demo">
+        <div class="mission-header">
+          <span id="z-floor">Étage 1 — Lieu de vie</span
+          ><span id="z-key">Clé : non</span
+          ><span id="z-time" role="timer" aria-label="Temps restant"
+            >03:00</span
+          >
+        </div>
+        <div class="zinzin-layout">
+          <aside class="zinzin-help">
+            <h3>Commandes</h3>
+            <p>↑ ↓ ← → : se déplacer<br />A : interagir<br />Échap : pause</p>
+            <h3>Légende</h3>
+            <p>
+              <span class="key-player">●</span> Votre ZINZIN<br /><span
+                class="key-tp"
+                >■</span
+              >
+              Téléporteur départ<br /><span class="key-arrival">■</span>
+              Arrivée<br /><span class="key-chest">■</span> Coffre ou caisse<br /><span
+                class="key-control"
+                >■</span
+              >
+              Commandes de pilotage
+            </p>
+          </aside>
+          <canvas
+            id="z-canvas"
+            width="600"
+            height="600"
+            tabindex="0"
+            aria-label="Carte interactive du vaisseau. Lancez la démo puis utilisez les flèches pour vous déplacer et A pour interagir."
+            >Votre navigateur doit prendre en charge le canvas pour afficher la
+            carte du jeu.</canvas
+          >
+          <aside class="zinzin-status">
+            <h3>Interaction</h3>
+            <p id="z-message" role="status" aria-live="polite">
+              Lancez la mission pour prendre les commandes.
+            </p>
+            <div id="z-destinations" hidden>
+              <p>
+                Destination · ↑ ↓ pour choisir, Entrée pour valider, Échap pour
+                annuler
+              </p>
+              <div
+                class="z-destination-buttons"
+                role="group"
+                aria-label="Choisir un étage"
+              ></div>
+            </div>
+            <h3>Étages explorés</h3>
+            <ol id="z-visited"></ol>
+            <button class="btn" type="button" id="z-hint">Un indice ?</button>
+          </aside>
+        </div>
+        <div class="zinzin-actions">
+          <button class="btn primary" type="button" id="z-start">
+            Lancer la démo</button
+          ><button class="btn" type="button" id="z-pause" disabled>Pause</button
+          ><button class="btn" type="button" id="z-action" disabled>
+            Interagir (A)</button
+          ><button class="btn" type="button" id="z-reset">Recommencer</button>
+        </div>
+        <div class="z-pad" role="group" aria-label="Déplacement du ZINZIN">
+          <button type="button" data-move="up" aria-label="Monter">↑</button
+          ><button type="button" data-move="left" aria-label="Aller à gauche">
+            ←</button
+          ><button type="button" data-move="down" aria-label="Descendre">
+            ↓</button
+          ><button type="button" data-move="right" aria-label="Aller à droite">
+            →
+          </button>
+        </div>
+        <p class="method-note">
+          Le clavier ne commande le jeu que lorsque la carte est sélectionnée.
+          Les boutons permettent aussi de jouer sur mobile.
+        </p>
+        <noscript
+          >Activez JavaScript pour jouer à la démo, ou téléchargez le projet C#
+          ci-dessus.</noscript
+        >
+      </div>
+    </dialog>
+    <script src="../assets/js/project-sections.js"></script>
+    <script src="../assets/js/zinzin-route.js"></script>
+    <script src="../assets/js/zinzin-places.js?v=carousel-2"></script>
+    <script src="../assets/js/zinzin-gallery.js"></script>
+    <script src="../assets/js/zinzin-scores.js"></script>
+    <script src="../assets/js/zinzin-maps.js"></script>
+    <script src="../assets/js/zinzin-engine.js"></script>
+    <script src="../assets/js/zinzin-demo.js"></script>
+  </body>
+</html>

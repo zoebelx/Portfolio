@@ -1,0 +1,883 @@
+.addylink-theme {
+  --bg: #163139;
+  --surface: #203f48;
+  --ink: #e3f1ee;
+  --muted: #b2cbce;
+  --accent: #64d4df;
+  --on-accent: #102d34;
+  --line: #41636c;
+  color-scheme: dark;
+  background:
+    radial-gradient(ellipse at 100% 0, #20454d 0, transparent 45%), var(--bg);
+  color: var(--ink);
+}
+.association-page {
+  max-width: 1160px;
+}
+.association-page .project-heading {
+  position: relative;
+  overflow: hidden;
+  background: #204751;
+  border: 1px solid #3b7780;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  box-shadow: 0 8px 0 #10282f;
+}
+.association-page .project-heading::after {
+  content: "";
+  position: absolute;
+  right: -55px;
+  top: -65px;
+  width: 240px;
+  height: 240px;
+  border: 30px solid #398a96;
+  border-radius: 50%;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.association-page .project-heading h1 {
+  position: relative;
+  font-size: clamp(3rem, 9vw, 6rem);
+  letter-spacing: -0.05em;
+  color: #87e0e7;
+  z-index: 1;
+}
+.association-page .project-subtitle {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  max-width: 30ch;
+}
+.association-state {
+  display: inline-block;
+  margin: 1rem 0 0 1rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #b2cbce;
+}
+.journey-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 2rem 0 1rem;
+  padding: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #203f48;
+}
+.journey-nav a {
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.journey-nav a:hover,
+.journey-nav a[aria-current="step"] {
+  background: #64d4df;
+  color: #102d34;
+}
+.project-journey {
+  position: relative;
+  padding-left: 3.7rem;
+}
+.project-journey::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  bottom: 2rem;
+  left: 1.1rem;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    #309eac 0 10px,
+    transparent 10px 18px
+  );
+}
+.journey-chapter {
+  position: relative;
+  padding: 1.5rem 0 2rem;
+  scroll-margin-top: 1rem;
+}
+.journey-marker {
+  position: absolute;
+  left: -3.7rem;
+  top: 2rem;
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  background: #64d4df;
+  color: #102d34;
+  border: 4px solid var(--bg);
+  border-radius: 50%;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  box-sizing: content-box;
+}
+.journey-chapter > .project-section {
+  margin-top: 0;
+}
+.journey-chapter > .project-section + .project-section {
+  margin-top: 2rem;
+}
+.chapter-label {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0;
+}
+.journey-chapter h2 {
+  margin-top: 0.5rem;
+  max-width: 30ch;
+}
+.association-page .prototype-section {
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  gap: 1.5rem;
+}
+.association-page .prototype-figure img {
+  box-shadow: 0 5px 16px #183f4815;
+}
+.addylink-contribution {
+  grid-column: 1/-1;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+}
+.addylink-contribution > h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 1rem;
+  color: var(--accent);
+}
+.addylink-contribution ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.addylink-contribution li {
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--accent);
+  border-radius: 9px;
+}
+.addylink-contribution h4 {
+  font-size: 1.05rem;
+  color: var(--accent);
+  margin: 0 0 0.5rem;
+}
+.addylink-contribution p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+@media (max-width: 700px) {
+  .addylink-contribution ul {
+    grid-template-columns: 1fr;
+  }
+}
+.play-cards {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+}
+.play-cards > li {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1.25rem;
+  background: #203f48;
+  border: 1px solid #41636c;
+  border-radius: 14px;
+  box-shadow: 0 5px 0 #10282f;
+}
+.play-cards > li:nth-child(2) {
+  background: #214b54;
+  border-color: #3b7780;
+}
+.play-cards > li:nth-child(3) {
+  background: #45483e;
+  border-color: #71745c;
+}
+.play-symbol {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  background: #64d4df;
+  color: #102d34;
+  border-radius: 9px;
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.play-number {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  color: #b2cbce;
+}
+.play-cards h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin: 0.6rem 0;
+}
+.play-cards p {
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+}
+.play-foot {
+  margin-top: auto;
+  border-top: 1px solid #b2cbce40;
+  padding-top: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.association-page [aria-labelledby="intention"] {
+  background: #20454d;
+  border-radius: 12px;
+  padding: 1.3rem 1.5rem;
+}
+.association-page [aria-labelledby="intention"] h2 {
+  font-size: 1.3rem;
+}
+.association-page .game-slide {
+  box-shadow: 0 4px 0 #10282f;
+}
+.association-page .game-preview {
+  background: #19353e;
+}
+.association-page .association-role {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 5px 0 #10282f;
+}
+.addylink-theme .game-lightbox {
+  background: var(--surface);
+}
+.addylink-theme .game-lightbox.book-reader {
+  background: #203f48;
+}
+.addylink-theme .book-reader #lightbox-image {
+  background: #152d35;
+}
+@media (max-width: 850px) {
+  .play-cards {
+    grid-template-columns: 1fr;
+  }
+  .play-cards > li {
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0 1rem;
+  }
+  .play-symbol {
+    grid-column: 1;
+    grid-row: 1/4;
+    margin: 0;
+  }
+  .play-number,
+  .play-cards h3,
+  .play-cards p,
+  .play-foot {
+    grid-column: 2;
+  }
+  .play-cards p {
+    margin-bottom: 0.7rem;
+  }
+  .association-page .prototype-section {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .project-journey {
+    padding-left: 2.7rem;
+  }
+  .journey-marker {
+    left: -2.7rem;
+    width: 1.9rem;
+    height: 1.9rem;
+    font-size: 0.7rem;
+  }
+  .project-journey::before {
+    left: 0.9rem;
+  }
+  .association-state {
+    display: block;
+    margin: 1rem 0 0;
+  }
+  .journey-nav {
+    gap: 0;
+  }
+  .journey-nav a {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  .association-page .prototype-section {
+    padding: 1rem;
+  }
+  .play-cards > li {
+    padding: 1rem;
+  }
+  .association-page [aria-labelledby="intention"] {
+    padding: 1rem;
+  }
+}
+
+.ethy-logo {
+  float: right;
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  margin: 0 0 0.8rem 1rem;
+}
+@media (max-width: 600px) {
+  .ethy-logo {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* Un parcours qui avance avec la lecture, sur des panneaux plus distincts. */
+.journey-nav {
+  position: sticky;
+  top: 0.5rem;
+  z-index: 10;
+  background: #254b55;
+  border-color: #638b94;
+  box-shadow: 0 6px 20px #071c2760;
+}
+.project-journey {
+  --journey-progress: 0;
+}
+.project-journey::before {
+  width: 4px;
+  background: #345761;
+  border-radius: 4px;
+}
+.project-journey::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: 1rem;
+  bottom: 2rem;
+  left: 1.1rem;
+  width: 4px;
+  background: linear-gradient(#4da8b8, #83edf0);
+  border-radius: 4px;
+  transform: scaleY(var(--journey-progress));
+  transform-origin: top;
+  box-shadow: 0 0 12px #64d4df50;
+}
+.journey-marker {
+  z-index: 1;
+  background: #254651;
+  color: #c0dde0;
+  border-color: var(--bg);
+  box-shadow: 0 0 0 1px #5b8490;
+  transition:
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s,
+    transform 0.25s;
+}
+.journey-chapter.is-passed .journey-marker {
+  background: #398c9a;
+  color: #fff;
+}
+.journey-chapter.is-current .journey-marker {
+  background: #85e4e8;
+  color: #102d34;
+  box-shadow:
+    0 0 0 4px #64d4df35,
+    0 0 22px #64d4df35;
+  transform: scale(1.1);
+}
+.association-page .prototype-section,
+.association-page .association-role {
+  background: #315965;
+  border-color: #74949b;
+  box-shadow: 0 9px 24px #071c2740;
+}
+.association-page .association-role {
+  border-left-color: #85e4e8;
+}
+.play-cards > li {
+  background: #365e69;
+  border-color: #7d9ba3;
+  box-shadow: 0 7px 18px #071c2740;
+}
+.play-cards > li:nth-child(2) {
+  background: #286273;
+  border-color: #71a5ae;
+}
+.play-cards > li:nth-child(3) {
+  background: #565b49;
+  border-color: #9b9c7d;
+}
+.play-number {
+  color: #d4e9eb;
+}
+.play-foot {
+  border-top-color: #d4e9eb45;
+}
+.association-page [aria-labelledby="intention"] {
+  background: #2b515c;
+  border: 1px solid #678993;
+}
+.association-page .game-slide {
+  background: #315965;
+  border-color: #74949b;
+  box-shadow: 0 7px 18px #071c2740;
+}
+.association-page .game-caption {
+  background: #315965;
+  border-top-color: #74949b;
+}
+.association-page .game-preview {
+  background: #1d414c;
+}
+.association-page .game-preview img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .play-cards > li {
+    transition:
+      transform 0.2s,
+      box-shadow 0.2s;
+  }
+  .play-cards > li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px #071c2760;
+  }
+}
+@media (max-width: 600px) {
+  .project-journey::after {
+    left: 0.9rem;
+  }
+  .journey-nav {
+    top: 0.25rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .journey-marker {
+    transition: none;
+  }
+  .journey-chapter.is-current .journey-marker {
+    transform: none;
+  }
+}
+
+/* Une lecture plus lumineuse, sans grands aplats blancs. */
+.addylink-theme {
+  --bg: #25434d;
+  --surface: #3c626d;
+  --line: #73949d;
+  --ink: #f0f6f2;
+  --muted: #c9dce0;
+  background:
+    radial-gradient(ellipse at top right, #3b6872 0, transparent 60%), var(--bg);
+}
+.association-page .project-heading {
+  background: #355f6b;
+  border-color: #7aa5ae;
+  box-shadow: 0 8px 0 #1d3943;
+}
+.journey-nav {
+  background: #345c68;
+  border-color: #789aa3;
+}
+.association-page .prototype-section,
+.association-page .association-role {
+  background: #426b77;
+  border-color: #8ba9b0;
+}
+.play-cards > li {
+  background: #426b77;
+  border-color: #8ba9b0;
+}
+.play-cards > li:nth-child(2) {
+  background: #366f7c;
+  border-color: #82b2bb;
+}
+.play-cards > li:nth-child(3) {
+  background: #636850;
+  border-color: #a7ac8b;
+}
+.association-page [aria-labelledby="intention"] {
+  background: #3b626e;
+  border-color: #829fa7;
+}
+.association-page .game-slide,
+.association-page .game-caption {
+  background: #426b77;
+  border-color: #8ba9b0;
+}
+.association-page .game-preview {
+  background: #2a4a56;
+}
+
+/* Le chemin alterne entre les deux bords, dans les espaces entre les blocs. */
+.project-journey {
+  padding-left: 0;
+}
+.project-journey.has-route::before,
+.project-journey.has-route::after {
+  display: none;
+}
+.journey-chapter {
+  margin: 0 3.5rem;
+  padding: 2rem 0 6rem;
+}
+.journey-chapter:nth-of-type(odd) {
+  margin-right: 5.5rem;
+}
+.journey-chapter:nth-of-type(even) {
+  margin-left: 5.5rem;
+}
+.journey-chapter:nth-of-type(odd) > .journey-marker {
+  left: -3.5rem;
+  right: auto;
+  top: 2rem;
+}
+.journey-chapter:nth-of-type(even) > .journey-marker {
+  left: auto;
+  right: -3.5rem;
+  top: 2rem;
+}
+.journey-route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+.journey-route path {
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.route-base {
+  stroke: #759aa4;
+  opacity: 0.45;
+}
+.route-fill {
+  stroke: #88e4ea;
+  filter: drop-shadow(0 0 4px #64d4df55);
+}
+.journey-chapter > .project-section {
+  position: relative;
+  z-index: 1;
+}
+.journey-chapter > .journey-marker {
+  z-index: 2;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-item {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.65s ease var(--reveal-delay, 0ms),
+      transform 0.65s cubic-bezier(0.2, 0.75, 0.25, 1) var(--reveal-delay, 0ms);
+  }
+  .reveal-item.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .journey-chapter,
+  .journey-chapter:nth-of-type(odd),
+  .journey-chapter:nth-of-type(even) {
+    margin: 0 0 0 2.8rem;
+    padding-bottom: 4rem;
+  }
+  .journey-chapter:nth-of-type(odd) > .journey-marker,
+  .journey-chapter:nth-of-type(even) > .journey-marker {
+    left: -2.8rem;
+    right: auto;
+  }
+}
+
+/* Le matériel réel illustre chaque étape du tour. */
+.play-art {
+  height: 210px;
+  margin: -0.25rem -0.25rem 1rem;
+  display: grid;
+  place-items: center;
+  background: #284a55;
+  border-radius: 9px;
+  overflow: hidden;
+}
+.play-art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
+@media (max-width: 850px) {
+  .play-cards > li {
+    display: flex;
+  }
+  .play-art {
+    flex: none;
+    height: 200px;
+    margin: 0 0 1rem;
+  }
+  .play-art img {
+    max-height: 200px;
+  }
+}
+.game-practical {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 0.8rem 0 1rem;
+  padding: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.game-practical li + li::before {
+  content: "·";
+  display: inline-block;
+  margin: 0 0.65rem;
+  color: var(--muted);
+}
+.association-page .game-intention {
+  background: transparent;
+  border: 0;
+  border-left: 3px solid var(--accent);
+  border-radius: 0;
+  padding: 0.5rem 0 0.5rem 1.2rem;
+}
+.association-page .game-intention h2 {
+  font-size: clamp(1.15rem, 2.3vw, 1.45rem);
+  line-height: 1.4;
+  max-width: 48ch;
+  margin: 0 0 0.65rem;
+}
+.book-text-link {
+  font: inherit;
+  font-size: 0.85rem;
+  border: 0;
+  padding: 0.3rem 0;
+  background: transparent;
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  cursor: pointer;
+}
+.book-text-link:hover {
+  color: var(--accent);
+}
+.journey-route path {
+  stroke-width: 3;
+}
+.route-base {
+  opacity: 0.3;
+}
+.route-fill {
+  filter: drop-shadow(0 0 2px #64d4df35);
+}
+.journey-chapter {
+  scroll-margin-top: 6rem;
+}
+.journey-chapter {
+  padding-top: 1rem;
+  padding-bottom: 3.5rem;
+}
+.journey-chapter:nth-of-type(odd) > .journey-marker,
+.journey-chapter:nth-of-type(even) > .journey-marker {
+  top: 1rem;
+}
+.journey-chapter > .project-section + .project-section {
+  margin-top: 1rem;
+}
+.journey-nav {
+  margin: 1.25rem 0 0.5rem;
+}
+.association-page .project-heading {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+}
+@media (max-width: 700px) {
+  .journey-chapter,
+  .journey-chapter:nth-of-type(odd),
+  .journey-chapter:nth-of-type(even) {
+    padding-bottom: 2.5rem;
+  }
+}
+
+.journey-chapter {
+  padding-bottom: 8rem;
+}
+.game-preview[data-book="regles"] img {
+  object-position: center 45%;
+}
+.association-future {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #8ba9b0;
+}
+.association-future svg {
+  width: 130px;
+  height: 65px;
+  flex: none;
+  overflow: visible;
+}
+.association-future path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.association-future strong {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--accent);
+}
+.association-future p {
+  font-size: 0.9rem;
+  margin: 0.4rem 0 0;
+}
+@media (max-width: 600px) {
+  .association-future {
+    align-items: flex-start;
+  }
+  .association-future svg {
+    width: 70px;
+    height: 45px;
+  }
+}
+.association-roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+.association-roles > div {
+  padding: 1rem;
+  background: #284c57;
+  border: 1px solid #7a9ca6;
+  border-radius: 10px;
+}
+.association-roles h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  margin: 0 0 0.5rem;
+  color: var(--accent);
+}
+.association-roles p {
+  font-size: 0.95rem;
+  margin: 0;
+}
+.future-outside {
+  position: relative;
+  z-index: 1;
+  border-top: 0;
+  margin: 0.5rem 0 0;
+  padding: 0;
+  gap: 0.75rem;
+}
+.future-outside svg {
+  width: 140px;
+  height: 70px;
+}
+.future-outside strong {
+  font-size: 1.05rem;
+}
+/* Garder le parcours et laisser respirer les contributions sans empiler les cadres. */
+.association-intro { max-width: 65ch; line-height: 1.7; }
+.association-page { padding-top: 0; }
+.association-page .project-heading { padding: 0; border-radius: 12px; margin-bottom: 2.5rem; }
+.association-page .project-heading > :not(.association-band) { margin-left: clamp(1.5rem, 4vw, 2.5rem); margin-right: clamp(1.5rem, 4vw, 2.5rem); }
+.association-page .project-heading > .project-eyebrow { margin-top: 2rem; }
+.association-page .project-heading > .btn { margin-bottom: 2rem; }
+.association-page .project-heading h1 { font-size: clamp(2.5rem, 5vw, 3.5rem); line-height: 1.13; }
+.association-page .project-subtitle { font-size: clamp(1.3rem, 2.5vw, 1.7rem); line-height: 1.35; }
+.association-band { position: relative; z-index: 1; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; padding: 0.75rem 1.25rem; font-size: 0.8rem; font-weight: 600; background: var(--accent); color: var(--on-accent); border-bottom: 1px solid var(--line); }
+.association-page .journey-chapter h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.2; }
+.association-page .journey-chapter, .association-page #contribution { scroll-margin-top: var(--project-nav-offset, 110px); }
+.association-page .btn { min-height: 44px; }
+.association-intro strong { font-weight: 700; }
+.association-page .journey-chapter { padding-bottom: 5rem; }
+.association-page .journey-chapter:last-child { padding-bottom: 2rem; }
+.association-page .addylink-contribution li { padding: 0.25rem 1rem 0.25rem 0; background: transparent; border: 0; border-radius: 0; }
+.association-page .addylink-contribution li + li { padding-left: 1rem; border-left: 1px solid var(--line); }
+.association-page .addylink-contribution h4 { margin-bottom: 0.65rem; }
+.association-page .addylink-contribution p { line-height: 1.65; }
+.association-page .association-status { margin: 1.2rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.association-page .association-roles { gap: 1.5rem; }
+.association-page .association-roles > div { padding: 0; background: transparent; border: 0; border-radius: 0; }
+.association-page .association-roles > div + div { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+.association-page .project-section > p { max-width: 68ch; }
+.association-page .play-cards p { line-height: 1.65; }
+.association-page .journey-nav { gap: 0.3rem; }
+@media (max-width: 850px) and (min-width: 701px) {
+  .association-page .journey-chapter, .association-page .journey-chapter:nth-of-type(odd), .association-page .journey-chapter:nth-of-type(even) { margin-inline: 3.5rem; }
+  .association-page .play-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .association-page .play-cards > li:last-child { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1.25rem; }
+  .association-page .play-cards > li:last-child .play-art { grid-column: 1; grid-row: 1 / 5; margin: 0; }
+}
+@media (max-width: 700px) {
+  .association-page .journey-chapter { padding-bottom: 3.5rem; }
+  .association-page .addylink-contribution ul { gap: 1rem; }
+  .association-page .addylink-contribution li, .association-page .addylink-contribution li + li { padding: 0 0 0 0.9rem; border: 0; border-left: 2px solid var(--accent); }
+  .association-page .play-cards > li { display: grid; grid-template-columns: minmax(80px, 30%) minmax(0, 1fr); gap: 0 1rem; }
+  .association-page .play-art { grid-column: 1; grid-row: 1 / 5; height: auto; min-height: 150px; margin: 0; align-self: stretch; }
+  .association-page .play-art img { padding: 0.25rem; max-height: 220px; }
+  .association-page .play-number, .association-page .play-cards h3, .association-page .play-cards p, .association-page .play-foot { grid-column: 2; }
+  .association-page .play-cards h3 { font-size: 1.05rem; }
+  .association-page .play-foot { display: none; }
+  .association-page .play-cards p { font-size: 0.85rem; margin: 0; }
+  .association-page .journey-nav { padding: 0.4rem; }
+  .association-page .journey-nav a { flex: 1 0 28%; text-align: center; }
+  .journey-chapter { scroll-margin-top: 8rem; }
+}
+@media (max-width: 600px) {
+  .association-page .association-roles > div + div { border-left: 0; padding: 0.8rem 0 0; border-top: 1px solid var(--line); }
+}
+@media (max-width: 380px) {
+  .association-page .play-cards > li { display: flex; }
+  .association-page .play-art { height: 180px; min-height: 0; margin-bottom: 0.8rem; }
+}
+@media (max-width: 600px) {
+  .association-roles {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  .future-outside svg {
+    width: 85px;
+    height: 55px;
+  }
+}

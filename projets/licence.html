@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Projets Python de licence — Zoé Schliefer Berlioux</title>
+    <link rel="icon" href="../assets/images/IconePage.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="../assets/css/reseau.css" />
+    <link rel="stylesheet" href="../assets/css/project-universes.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/project-preview.css" />
+    <link rel="stylesheet" href="../assets/css/project-navigation.css" />
+    <link rel="stylesheet" href="../assets/css/python-workshop.css?v=tablet-2" />
+    <script src="../assets/js/accessibility.js"></script>
+    <meta
+      name="description"
+      content="Deux projets Python de licence : reconnaissance de lettres et recherche d’itinéraire, avec une démonstration interactive du réseau récurrent."
+    />
+    <meta property="og:title" content="Projets Python de licence — Zoé Schliefer Berlioux" />
+    <meta
+      property="og:description"
+      content="Deux projets Python de licence : reconnaissance de lettres et recherche d’itinéraire, avec une démonstration interactive du réseau récurrent."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Image relative tant que l'adresse publique du portfolio n'est pas configuree. -->
+    <meta property="og:image" content="../assets/images/social/licence.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Démo du réseau récurrent" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="../assets/images/social/licence.jpg" />
+  </head>
+  <body data-project="licence">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <main id="main-content" tabindex="-1" class="wrap project-page project-preview python-workshop">
+      <div class="preview-sticky">
+        <a class="back-link" href="../index.html#projets" aria-label="Retour aux projets">← Projets</a>
+      <nav class="preview-nav" aria-label="Dans ce projet"><a href="#apercu">Le projet</a><a href="#contribution">Ma contribution</a><a href="#reseau">La démo</a></nav>
+        <details class="comfort" id="comfort">
+          <summary>Confort de lecture</summary>
+          <div class="panel">
+            <button
+              class="toggle"
+              id="t-theme"
+              type="button"
+              aria-pressed="false"
+            >
+              Thème sombre
+            </button>
+            <button
+              class="toggle"
+              id="t-big"
+              type="button"
+              aria-pressed="false"
+            >
+              Texte plus grand
+            </button>
+            <button
+              class="toggle"
+              id="t-calm"
+              type="button"
+              aria-pressed="false"
+            >
+              Moins d'animations
+            </button>
+          </div>
+        </details>
+      </div>
+      <header class="preview-hero" id="apercu">
+        <div class="preview-band"><span>École · Licence · 2025</span><span>Python</span></div>
+        <div class="preview-hero-content">
+          <div><p class="preview-eyebrow">Informatique &amp; données</p><h1>Deux projets Python,<br />deux problèmes à explorer.</h1><p>Reconnaître une lettre déformée et rechercher un itinéraire court entre quinze villes.</p><a class="btn primary" href="#reseau">Essayer le réseau ↓</a></div>
+          <figure><img src="../assets/images/projetlience.png" alt="Une lettre A altérée puis reconstruite par le réseau." /><figcaption>Du dessin altéré à la lettre reconstruite.</figcaption></figure>
+        </div>
+      </header>
+      <section class="preview-contribution workshop-work" id="contribution" aria-labelledby="preview-role-title">
+        <h2 id="preview-role-title">Du pixel au parcours</h2>
+        <article class="workshop-row">
+          <figure class="pixel-study">
+            <span class="study-label">Réseau récurrent</span>
+            <div class="pixel-study-grid"><img src="../assets/images/licence/lettre-grille.svg" alt="Lettre A représentée dans la grille de 16 par 16 pixels du projet." /><span class="grid-dimension" aria-hidden="true">16 × 16</span></div>
+            <figcaption>Une lettre, 256 cellules.</figcaption>
+          </figure>
+          <div class="workshop-copy"><span class="workshop-index">01 / Reconnaître</span><h3>Retrouver une lettre <br />malgré les pixels modifiés.</h3><p>J’ai adapté le réseau pour passer de lettres de 6 × 6 à 16 × 16 pixels, puis créé l’interface de reconnaissance avec Tkinter.</p><a class="workshop-jump" href="#reseau">Mettre le réseau à l’épreuve ↓</a></div>
+        </article>
+        <article class="workshop-row workshop-route">
+          <div class="workshop-copy"><span class="workshop-index">02 / Chercher</span><h3>Quinze villes. <br />Quel circuit emprunter ?</h3><p>J’ai développé un algorithme génétique : sélectionner des parcours, les croiser et les faire muter pour rechercher un circuit court.</p><p class="workshop-observation">Le programme affiche la meilleure distance de chaque génération, puis le parcours retenu.</p></div>
+          <figure class="route-study"><span class="study-label">Algorithme génétique</span><a href="../assets/images/licence/genetique-resultat.png" target="_blank" rel="noopener noreferrer" aria-label="Voir l’extrait complet des résultats de mon programme (nouvel onglet)"><div class="route-terminal"><img src="../assets/images/licence/genetique-resultat.png" alt="Extrait d’une exécution : distances par génération et circuit trouvé entre les villes." /></div></a><figcaption>Extrait d’une exécution de mon programme. <span aria-hidden="true">↗</span></figcaption></figure>
+        </article>
+        <a class="btn preview-canva" href="https://projetacademique.my.canva.site/l2scienceco/" target="_blank" rel="noopener noreferrer">Découvrir les deux projets ↗</a>
+      </section>
+
+      <section id="reseau" aria-labelledby="preview-demo-title">
+        <h2 id="preview-demo-title">Le réseau à l’épreuve</h2>
+        <p class="preview-demo-intro">Choisissez une lettre, modifiez quelques cases et lancez la reconstruction.</p>
+        <div class="network-lab" aria-labelledby="lab-title">
+          <h3 id="lab-title"><span>Manipulation</span><span>16 × 16 pixels</span></h3>
+          <div class="network-toolbar">
+            <label for="network-letter">Lettre de départ</label
+            ><select
+              id="network-letter"
+              aria-label="Choisir une lettre"
+            ></select
+            ><button type="button" class="btn" id="network-random">
+              Lettre aléatoire
+            </button>
+            <button type="button" class="btn" id="network-reset">Restaurer la lettre</button>
+          </div>
+          <div class="network-actions">
+            <button type="button" class="btn primary" id="network-run">
+              Reconstruire la lettre</button>
+          </div>
+          <div class="network-grids">
+            <figure>
+              <figcaption>
+                <strong>01 / Votre lettre</strong
+                ><span>Touchez les cases pour modifier le dessin.</span>
+              </figcaption>
+              <canvas
+                id="network-input"
+                width="384"
+                height="384"
+                tabindex="0"
+                aria-label="Grille de 16 par 16 pixels. Dessinez à la souris ou au doigt. Au clavier : flèches pour choisir une case, Espace pour l’inverser."
+              ></canvas>
+            </figure>
+            <div class="network-arrow" aria-hidden="true">→</div>
+            <figure>
+              <figcaption>
+                <strong>02 / Reconstruction</strong
+                ><span class="network-legend"><i aria-hidden="true"></i> Pixels corrigés par le réseau</span>
+              </figcaption>
+              <canvas
+                id="network-output"
+                width="384"
+                height="384"
+                aria-label="Résultat de la reconstruction par le réseau"
+              ></canvas>
+              <p id="network-status" class="network-status" tabindex="-1" role="status" aria-live="polite">En attente de reconstruction</p>
+            </figure>
+          </div>
+
+          <p class="network-caution">Le réseau peut se tromper. Essayez avec quelques pixels modifiés pour commencer.</p>
+          <details class="network-keyboard">
+            <summary>Utiliser la grille au clavier</summary>
+            <p><kbd>Tab</kbd> pour atteindre la grille · <kbd>← ↑ ↓ →</kbd> pour choisir une case · <kbd>Espace</kbd> pour la modifier.</p>
+          </details>
+          <noscript>Activez JavaScript pour essayer le réseau.</noscript>
+        </div>
+      </section>
+    </main>
+    <script src="../assets/js/reseau-data.js?v=original-learning-selected-3"></script>
+    <script src="../assets/js/reseau-engine.js"></script>
+    <script src="../assets/js/project-sections.js"></script>
+    <script src="../assets/js/reseau-demo.js?v=feedback-7"></script>
+  </body>
+</html>

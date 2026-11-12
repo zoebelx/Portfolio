@@ -1,0 +1,462 @@
+.project-page {
+  max-width: 1000px;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 2rem;
+  text-underline-offset: 0.25em;
+}
+.project-heading {
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--surface);
+  border-radius: 20px;
+}
+.project-heading h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  max-width: 22ch;
+  margin: 0.5rem 0 1rem;
+}
+.project-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin: 0;
+}
+.project-subtitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 35ch;
+}
+.project-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+  padding-top: 1.2rem;
+}
+.project-metrics strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--accent);
+}
+.project-metrics span {
+  font-size: 0.9rem;
+}
+.project-section {
+  margin-top: 2.5rem;
+}
+.project-section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+.project-section p {
+  max-width: 75ch;
+}
+.project-steps {
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+.project-steps li {
+  padding-left: 0.5rem;
+}
+.project-steps li::marker {
+  font-weight: 700;
+  color: var(--accent);
+}
+.project-steps h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+.project-steps p {
+  margin: 0.4rem 0;
+}
+.falc-page .project-heading > p:not(.project-eyebrow) {
+  max-width: 62ch;
+}
+.falc-role {
+  padding: clamp(1.2rem, 3vw, 2rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 14px;
+}
+.falc-role h2 {
+  margin-top: 0;
+}
+.falc-page strong {
+  color: var(--accent);
+}
+.falc-role p {
+  max-width: 62ch;
+}
+.falc-role .falc-collective {
+  margin-bottom: 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+.falc-steps {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  counter-reset: none;
+}
+.falc-steps li {
+  padding: clamp(1.2rem, 3vw, 1.6rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.falc-step-number {
+  display: block;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+.falc-steps h3 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+.falc-steps p {
+  margin: 0.65rem 0 0;
+  max-width: 40ch;
+}
+@media (max-width: 650px) {
+  .falc-steps {
+    grid-template-columns: 1fr;
+  }
+}
+.results-table-wrap {
+  overflow-x: auto;
+}
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+}
+.results-table caption {
+  text-align: left;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+}
+.results-table th,
+.results-table td {
+  padding: 0.9rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+.results-table thead {
+  color: var(--accent);
+}
+.results-table tbody th {
+  font-weight: 400;
+}
+.results-table td {
+  white-space: nowrap;
+  font-weight: 700;
+}
+.method-note,
+.project-credits {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.method-note {
+  border-left: 2px solid var(--line);
+  padding-left: 1rem;
+}
+.prototype-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.prototype-figure {
+  margin: 0;
+}
+.prototype-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.prototype-figure figcaption {
+  margin-top: 0.6rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.association-role {
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 12px;
+  border-left: 3px solid var(--accent);
+}
+.association-role h2 {
+  margin-top: 0;
+}
+.association-role strong {
+  color: var(--accent);
+}
+.entrepreneur-status {
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+  font-weight: 700;
+}
+.carousel-hint {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.game-track {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  padding-bottom: 0.75rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--surface);
+}
+.game-slide {
+  flex: 0 0 62%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+.game-slide:last-child {
+  margin-right: 38%;
+}
+.game-preview {
+  position: relative;
+  flex: none;
+  height: clamp(200px, 42svh, 360px);
+  overflow: hidden;
+  background: color-mix(in srgb, var(--surface) 70%, var(--bg));
+}
+.game-preview img {
+  position: absolute;
+  inset: 1rem;
+  display: block;
+  width: calc(100% - 2rem);
+  height: calc(100% - 2rem);
+  min-width: 0;
+  min-height: 0;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+.game-caption {
+  position: relative;
+  flex: 1;
+  padding: 1rem 1.3rem;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+.game-caption h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0.3rem 0 0.5rem;
+}
+.game-caption p {
+  margin: 0;
+  font-size: 1rem;
+}
+.game-index {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+}
+.carousel-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.7rem;
+}
+.carousel-controls .btn {
+  padding: 0.4rem 1rem;
+}
+.carousel-controls .btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+  background: transparent;
+  color: var(--ink);
+}
+@media (max-width: 600px) {
+  .game-caption {
+    padding: 1rem;
+  }
+  .game-preview {
+    height: clamp(180px, 38svh, 280px);
+  }
+}
+@media (max-width: 700px) {
+  .prototype-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .project-metrics {
+    grid-template-columns: 1fr;
+  }
+  .project-metrics > div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  .project-metrics strong {
+    min-width: 5rem;
+  }
+  .results-table th,
+  .results-table td {
+    padding: 0.65rem;
+  }
+}
+
+button.game-preview {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: zoom-in;
+  color: var(--ink);
+  font: inherit;
+}
+.preview-hint {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.65rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.8rem;
+  border: 1px solid var(--line);
+}
+.game-preview:hover .preview-hint {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+dialog.game-lightbox {
+  width: min(780px, calc(100% - 24px));
+  max-height: calc(100svh - 24px);
+  overflow-y: auto;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+.game-lightbox::backdrop {
+  background: rgba(6, 12, 22, 0.85);
+}
+.lightbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+.lightbox-header h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0;
+}
+.lightbox-header .btn {
+  font-size: 1.6rem;
+  padding: 0.1rem 0.65rem;
+  min-height: 2.4rem;
+}
+#lightbox-image {
+  display: block;
+  width: 100%;
+  height: min(60svh, 600px);
+  object-fit: contain;
+}
+#lightbox-description {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+}
+body.lightbox-open {
+  overflow: hidden;
+}
+@media (max-width: 600px) {
+  .game-slide {
+    flex-basis: 92%;
+  }
+  .game-slide:last-child {
+    margin-right: 8%;
+  }
+}
+
+@media (min-width: 701px) {
+  .game-preview {
+    height: 300px;
+  }
+}
+.game-preview img {
+  inset: 0.6rem;
+  width: calc(100% - 1.2rem);
+  height: calc(100% - 1.2rem);
+}
+.book-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+.book-controls[hidden] {
+  display: none;
+}
+.book-controls .btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.game-lightbox.book-reader {
+  width: min(720px, calc(100% - 24px));
+  background: #273e47;
+}
+.book-reader #lightbox-image {
+  height: min(68svh, 800px);
+  background: #20343c;
+  filter: drop-shadow(3px 4px 5px rgba(0, 0, 0, 0.2));
+}
+.book-reader #lightbox-description {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .book-page-turn {
+    animation: book-page-in 0.22s ease-out;
+    transform-origin: left center;
+  }
+  @keyframes book-page-in {
+    from {
+      opacity: 0.5;
+      transform: perspective(1000px) rotateY(9deg);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

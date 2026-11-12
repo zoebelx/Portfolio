@@ -1,0 +1,38 @@
+﻿.skills-page { padding-top: clamp(2rem, 5vw, 3.5rem); }
+.skills-heading { max-width: 46rem; margin-bottom: 2rem; }
+.skills-heading h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); margin-block: 0.7rem 1rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); grid-auto-rows: 1fr; gap: 1.4rem; align-items: stretch; padding: 1rem 0.6rem 1.5rem; background-image: radial-gradient(color-mix(in srgb, var(--ink) 15%, transparent) 1px, transparent 1px); background-size: 20px 20px; }
+.skill-domain { --card-accent: #edb363; position: relative; display: flex; flex-direction: column; min-width: 0; padding: 0 1.35rem 1.35rem; background: #fff9ea; color: #21353d; border: 2px solid #fff9ea; border-radius: 12px; box-shadow: 0 7px 0 #0004; }
+.domain-design { --card-accent: #d58a60; }
+.domain-human { --card-accent: #9fc3bb; }
+.domain-band { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin: 0 -1.35rem; padding: 0.65rem 0.8rem; background: var(--card-accent); color: #21353d; border-radius: 10px 10px 0 0; font-size: 0.75rem; font-weight: 600; border-bottom: 1px solid #21353d44; }
+.domain-band > span:last-child { font-size: 0.9rem; }
+.domain-symbol { display: grid; place-items: center; position: relative; width: 64px; height: 64px; margin: 1rem auto 0.8rem; color: #21353d; border: 1px solid #21353d66; border-radius: 50%; background: radial-gradient(circle, color-mix(in srgb, var(--card-accent) 45%, #fff9ea) 60%, transparent 61%); }
+.domain-symbol::before, .domain-symbol::after { content: ''; position: absolute; width: 8px; height: 8px; background: var(--card-accent); border: 1px solid #21353d88; transform: rotate(45deg); }
+.domain-symbol::before { left: -4px; }
+.domain-symbol::after { right: -4px; }
+.domain-symbol svg { width: 34px; height: 34px; }
+.skill-domain h2 { font-family: var(--font-display); font-size: 1.35rem; line-height: 1.3; margin: 0; }
+.domain-description { font-size: 0.95rem; line-height: 1.6; color: #405159; margin-block: 0.65rem 0.9rem; }
+.skills-list { list-style: none; display: flex; flex-wrap: wrap; align-content: start; gap: 0.4rem; padding: 0; margin: 0 0 1rem; }
+.skills-list li { max-width: 100%; padding: 0.25rem 0.5rem; border: 1px solid #21353d33; border-radius: 3px; background: color-mix(in srgb, var(--card-accent) 17%, #fff9ea); color: #21353d; font-size: 0.9rem; line-height: 1.5; }
+.skills-evidence { margin-top: auto; border-top: 1px dashed #21353d77; padding-top: 1rem; display: flex; flex-wrap: wrap; align-content: start; gap: 0.5rem; }
+.skills-evidence h3 { font-size: 0.8rem; color: #5c5140; font-weight: 400; margin: 0 0 0.25rem; width: 100%; }
+.skills-evidence a { display: inline-flex; align-items: center; justify-content: space-between; gap: 0.7rem; min-height: 44px; padding: 0.45rem 0.7rem; border: 1px solid #21353d66; border-radius: 5px; color: #21353d; font-size: 0.9rem; line-height: 1.4; text-decoration: none; }
+.skills-evidence a:hover { background: #21353d; color: #fff9ea; }
+.skill-domain :focus-visible { outline-color: #8b2540; }
+.skills-bottom { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; align-items: center; margin-top: 1.5rem; }
+.skills-contact { background: #9fc3bb; border-color: #9fc3bb; color: #21353d; }
+.skills-contact:hover { background: #bdd8d1; border-color: #bdd8d1; color: #21353d; }
+nav a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+@media (max-width: 1024px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .domain-design { margin-top: 0; }
+}
+@media (max-width: 600px) {
+  .skills-page { padding-top: 1.5rem; }
+  .skills-heading { margin-bottom: 1rem; }
+  .skills-grid { grid-template-columns: 1fr; gap: 1.4rem; padding: 1rem 0.4rem; }
+  .domain-symbol { width: 60px; height: 60px; margin-top: 0.9rem; }
+  .domain-symbol svg { width: 32px; height: 32px; }
+}

@@ -1,0 +1,33 @@
+/* Reperes partages entre les univers des projets. */
+.preview-sticky .preview-nav { display: flex; flex-wrap: wrap; }
+.preview-sticky .preview-nav a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-size: 0.9rem; }
+.preview-sticky .preview-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.3em; }
+.preview-sticky { position: sticky; top: 0; z-index: 20; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.25rem; padding-block: 0.7rem; margin-bottom: 1.5rem; background: var(--bg); border-bottom: 1px solid var(--line); box-shadow: none; }
+.preview-sticky .back-link { margin: 0; padding-block: 0.6rem; font-size: 0.9rem; }
+.preview-sticky .preview-nav { justify-content: center; gap: 0.4rem 1.25rem; border: 0; margin: 0; padding: 0; }
+.preview-sticky .preview-nav a { border-bottom: 2px solid transparent; padding-inline: 0.1rem; }
+.preview-sticky .preview-nav a[aria-current="location"] { color: var(--accent); border-bottom-color: var(--accent); }
+.preview-sticky .comfort { position: relative; }
+.preview-sticky .comfort .panel { right: 0; left: auto; }
+#apercu, #contribution, .project-preview #reseau { scroll-margin-top: var(--project-nav-offset, 110px); }
+.project-menu { display: contents; }
+.project-menu-toggle { display: none; }
+
+@media (max-width: 700px) {
+  .preview-sticky { grid-template-columns: 1fr auto; gap: 0.3rem 1rem; padding-block: 0.4rem; }
+  .preview-sticky .back-link { grid-column: 1; grid-row: 1; }
+  .preview-sticky .comfort { grid-column: 2; grid-row: 1; }
+  .preview-sticky .preview-nav { grid-column: 1 / -1; grid-row: 2; gap: 0.4rem 1rem; }
+  .preview-sticky .comfort summary { font-size: 0.8rem; min-height: 44px; padding-inline: 0.6rem; }
+  .preview-sticky .preview-nav a { font-size: 0.85rem; }
+}
+@media (max-width: 700px) {
+  .preview-sticky.has-project-menu .project-menu-toggle { display: grid; place-items: center; grid-column: 2; grid-row: 1; width: 44px; height: 44px; padding: 0; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); font: inherit; font-size: 1.5rem; cursor: pointer; }
+  .preview-sticky.has-project-menu .project-menu { display: none; position: absolute; top: 100%; left: 0; right: 0; padding: 0.75rem; background: var(--bg); border: 1px solid var(--line); border-radius: 0 0 8px 8px; max-height: calc(100svh - 80px); overflow-y: auto; }
+  .preview-sticky.has-project-menu.is-menu-open .project-menu { display: flex; flex-direction: column; gap: 0.75rem; }
+  .preview-sticky.has-project-menu .project-menu .preview-nav { display: flex; flex-direction: column; align-items: stretch; gap: 0; }
+  .preview-sticky.has-project-menu .project-menu .preview-nav a { justify-content: flex-start; padding: 0.6rem 0.5rem; font-size: 0.95rem; }
+  .preview-sticky.has-project-menu .project-menu .comfort { position: static; border-top: 1px solid var(--line); padding-top: 0.75rem; }
+  .preview-sticky.has-project-menu .project-menu .comfort summary { font-size: 0.9rem; }
+  .preview-sticky.has-project-menu .project-menu .comfort .panel { position: static; width: 100%; min-width: 0; margin-top: 0.5rem; box-sizing: border-box; box-shadow: none; }
+}

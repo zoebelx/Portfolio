@@ -1,0 +1,293 @@
+/* Shared preferences load after project palettes, preserving their default identity. */
+:root {
+  --on-ecole: #273e47;
+  --on-perso: #101010;
+  --on-rech: #fff9ea;
+}
+.company-fit {
+  font-size: 1rem;
+  max-width: 65ch;
+}
+.company-fit strong {
+  color: var(--accent);
+}
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  z-index: 1000;
+  transform: translateY(-180%);
+  background: var(--ink);
+  color: var(--bg);
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+}
+.skip-link:focus {
+  transform: none;
+}
+.project-comfort-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 8;
+}
+.project-comfort-bar .back-link {
+  margin-bottom: 0;
+}
+.project-comfort-bar .comfort {
+  position: static;
+}
+.project-comfort-bar .panel {
+  width: min(20rem, calc(100vw - 2rem));
+  z-index: 15;
+}
+.comfort summary:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+.toggle[aria-pressed="true"]::after {
+  content: "✓";
+  margin-left: 0.6rem;
+  font-weight: 700;
+}
+html body .game-table-modal,
+html body .game-lightbox,
+html body .demo-card-zoom {
+  color: #f0f6f2;
+  --ink: #f0f6f2;
+  --muted: #d5e9e9;
+  --accent: #9ceaf0;
+  --on-accent: #102d34;
+  --surface: #294f5a;
+  --bg: #203f48;
+}
+html.calme *,
+html.calme *::before,
+html.calme *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+html.calme .reveal-item {
+  opacity: 1 !important;
+  transform: none !important;
+}
+html[data-theme="light"] body[data-project]:not(.addylink-theme):not([data-project="escape"]) {
+  --bg: #f1eadf;
+  --surface: #fff8ee;
+  --ink: #25333c;
+  --muted: #465562;
+  --line: #687c89;
+  --accent: #235a92;
+  --on-accent: #fff;
+  background: var(--bg);
+  color-scheme: light;
+}
+html[data-theme="light"] body[data-project="licence"] {
+  --accent: #165bc5;
+}
+html[data-theme="dark"] body[data-project="licence"] {
+  --bg: #222a36;
+  --surface: #303b4c;
+  --ink: #fff8ed;
+  --muted: #d5deeb;
+  --line: #94a8c4;
+  --accent: #91bcff;
+  --on-accent: #182a44;
+  background: var(--bg);
+  color-scheme: dark;
+}
+html[data-theme="light"] body.addylink-theme {
+  --bg: #d2e5e5;
+  --surface: #e8f2ef;
+  --ink: #163b46;
+  --muted: #365962;
+  --line: #64848b;
+  --accent: #006c7e;
+  --on-accent: #fff;
+  background: var(--bg);
+  color-scheme: light;
+}
+html[data-theme="light"] .association-page .project-heading,
+html[data-theme="light"] .journey-nav,
+html[data-theme="light"] .play-cards > li,
+html[data-theme="light"] .association-role {
+  background: var(--surface);
+  color: var(--ink);
+}
+html[data-theme="light"]
+  .association-page
+  .project-heading
+  :is(h1, .project-subtitle) {
+  color: var(--ink);
+}
+html[data-theme="light"] .association-state {
+  color: var(--muted);
+}
+html[data-theme="light"] .association-roles > div {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+html[data-theme="light"] .association-roles :is(h3, p),
+html[data-theme="light"] .future-outside strong {
+  color: var(--ink);
+}
+html[data-theme="light"] .game-caption {
+  background: var(--surface);
+  color: var(--ink);
+}
+html[data-theme="light"] .play-foot {
+  color: var(--ink);
+}
+html[data-theme="light"] body[data-project="zinzin"] .z-route-nav {
+  background: var(--bg);
+}
+/* La carte conserve son rendu console ; les commandes suivent le theme clair. */
+html[data-theme="light"] body[data-project="zinzin"]
+  :is(dialog.zinzin-dialog, .zinzin-demo, .z-score-dialog) {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+  color-scheme: light;
+}
+html[data-theme="light"] body[data-project="zinzin"] .mission-header {
+  background: var(--bg);
+  color: var(--ink);
+}
+html[data-theme="light"] body[data-project="zinzin"] .zinzin-layout aside {
+  background: var(--bg);
+  color: var(--ink);
+}
+html[data-theme="light"] body[data-project="zinzin"] .zinzin-demo .method-note {
+  color: var(--muted);
+}
+html[data-theme="light"] body[data-project="zinzin"] .zinzin-demo .btn:disabled {
+  opacity: 1;
+  color: var(--muted);
+  background: var(--bg);
+  border-color: var(--line);
+}
+html[data-theme="light"]
+  body[data-project="zinzin"]
+  .z-discovery-grid
+  .project-eyebrow {
+  color: var(--accent);
+}
+/* Shared high-contrast palette for both themes. */
+:root {
+  --bg: #21353d;
+  --surface: #2d4650;
+  --ink: #fff9ea;
+  --muted: #fff0d0;
+  --line: #b0bfc1;
+  --accent: #edb363;
+  --on-accent: #21353d;
+  --board: #192b32;
+  --focus-board: #fff9ea;
+  --f-ecole: #d8973c;
+  --f-perso: #bd632f;
+  --f-rech: #a4243b;
+  --on-ecole: #182d36;
+  --on-perso: #101010;
+  --on-rech: #fff9ea;
+}
+:root[data-theme="light"] {
+  --bg: #e3d6be;
+  --surface: #fff9ea;
+  --ink: #152f3a;
+  --muted: #293f49;
+  --line: #526b75;
+  --accent: #8b2540;
+  --on-accent: #fff;
+  --board: #e3d6be;
+  --focus-board: #152f3a;
+  color-scheme: light;
+}
+html body[data-project],
+html body.addylink-theme {
+  --line: #b0bfc1;
+  --ink: #fff9ea;
+  --muted: #f0e7db;
+}
+html[data-theme="light"] body[data-project],
+html[data-theme="light"] body.addylink-theme {
+  --line: #526b75;
+  --ink: #152f3a;
+  --muted: #293f49;
+}
+html .board .count {
+  color: var(--ink);
+}
+html .tags li,
+html .card-skills span {
+  border-width: 2px;
+}
+html .card .band {
+  border-bottom: 2px solid var(--ink);
+}
+html #detail .facts strong {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+html:not([data-theme="light"]) #detail {
+  --detail-text-accent: color-mix(in srgb, var(--fam) 35%, var(--ink));
+}
+html[data-theme="light"] #detail {
+  --detail-text-accent: color-mix(in srgb, var(--fam) 65%, var(--ink));
+}
+body {
+  overflow-wrap: break-word;
+}
+img {
+  max-width: 100%;
+}
+button,
+a,
+summary,
+input,
+select {
+  touch-action: manipulation;
+}
+@media (max-width: 600px) {
+  .panel {
+    max-width: calc(100vw - 2rem);
+  }
+  .d-nav button {
+    flex: 1;
+  }
+  .project-filters {
+    gap: 0.6rem;
+  }
+  .project-sort {
+    flex-wrap: wrap;
+  }
+  .project-comfort-bar {
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  .project-comfort-bar .panel {
+    left: 0;
+    right: auto;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

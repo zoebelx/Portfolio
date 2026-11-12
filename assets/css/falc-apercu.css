@@ -1,0 +1,34 @@
+.notebook-entry { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.5rem, 4vw, 3rem); align-items: center; padding-block: 1.5rem 2.5rem; border-bottom: 1px dashed var(--line); }
+.notebook-entry + .notebook-entry { padding-top: 2.5rem; }
+.notebook-copy h3 { font-size: clamp(1.3rem, 2.3vw, 1.7rem); line-height: 1.25; margin: 0.7rem 0 1rem; }
+.notebook-copy p { line-height: 1.7; max-width: 45ch; }
+.notebook-index { color: var(--accent); font-size: 0.85rem; }
+.notebook-copy .notebook-note { font-size: 0.85rem; color: var(--muted); }
+.postcode-example { margin: 0; background: #fff9ea; color: #21353d; border-radius: 8px; overflow: hidden; box-shadow: 0 5px 0 #0003; }
+.example-band { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; background: #a9caff; color: #182b47; font-size: 0.8rem; padding: 0.8rem 1rem; }
+.example-band span { font-weight: 700; }
+.postcode-change { display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.6rem; padding: 2rem 1rem; align-items: center; }
+.postcode-change > div { display: flex; flex-direction: column; gap: 0.7rem; text-align: center; }
+.postcode-change > div > span { font-size: 0.8rem; }
+.postcode-change code { font: 700 clamp(1.1rem, 2vw, 1.5rem) var(--font-body); white-space: nowrap; }
+.code-space { color: #8c3c00; background: #ffe2bb; padding-inline: 0.1rem; }
+.postcode-change small { font-size: 0.75rem; color: #405159; line-height: 1.5; }
+.postcode-arrow { color: #235a92; }
+.postcode-example figcaption { padding: 0.9rem 1rem; border-top: 1px solid #21353d33; font-size: 0.8rem; line-height: 1.6; color: #405159; }
+.survey-comparison { margin: 0; display: grid; grid-template-columns: 1fr auto 1fr; gap: 0.7rem; align-items: center; }
+.survey-sheet { display: flex; flex-direction: column; gap: 0.7rem; padding: 1rem; background: #fff9ea; color: #21353d; border-top: 5px solid #a9caff; box-shadow: 0 4px 0 #0003; }
+.survey-sheet > span { font-size: 0.8rem; }
+.falc-page .survey-sheet strong { font-size: 1.7rem; color: #235a92; }
+.survey-sheet i { display: block; height: 3px; background: #8da0b3; margin-block: 0.3rem; }
+.survey-sheet i:last-child { width: 65%; }
+.comparison-bridge { display: flex; flex-direction: column; text-align: center; max-width: 7rem; gap: 0.5rem; font-size: 0.75rem; color: var(--muted); }
+.comparison-bridge > span:first-child { font-size: 1.8rem; color: var(--accent); }
+.survey-comparison figcaption { grid-column: 1 / -1; font-size: 0.8rem; color: var(--muted); line-height: 1.5; padding-top: 0.6rem; }
+.handover-note { padding: 1.5rem; background: #fff9ea; color: #21353d; border-top: 5px solid #a9caff; box-shadow: 0 5px 0 #0003; }
+.handover-note > span { font-weight: 700; color: #235a92; }
+.handover-note ul { padding-left: 1.2rem; line-height: 2; }
+.handover-note p { margin-bottom: 0; font-size: 0.85rem; color: #405159; border-top: 1px solid #21353d33; padding-top: 0.8rem; }
+@media (max-width: 700px) {
+  .notebook-entry { grid-template-columns: 1fr; }
+  .notebook-comparison .notebook-copy { grid-row: 1; }
+}

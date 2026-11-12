@@ -1,0 +1,106 @@
+html body[data-project="escape"] { --bg:#252525; --surface:#333332; --ink:#faf9f5; --muted:#d5d2ca; --line:#92918b; --accent:#bdd0b7; --on-accent:#24382d; background:var(--bg); color:var(--ink); }
+html[data-theme="light"] body[data-project="escape"] { --bg:#f7f6f2; --surface:#fff; --ink:#292a28; --muted:#5d5e58; --line:#a3a39a; --accent:#345d46; --on-accent:#fff; }
+body[data-project="escape"] .skip-link:not(:focus) { clip-path:inset(50%); pointer-events:none; }
+.escape-story { max-width:1040px; padding-top:0; }
+.escape-story .preview-sticky .back-link { margin:0; }
+.escape-story #apercu,.escape-story .project-section,.example-panel { scroll-margin-top:var(--project-nav-offset,110px); }
+.escape-story .story-journey { background:transparent; border:0; border-radius:0; overflow:visible; }
+.escape-story .story-chapter { padding:0; min-height:0; gap:2rem; }
+.escape-story .project-overview { margin-top:1.5rem; grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); }
+.escape-story .project-overview .story-intro { margin:0; padding:0; }
+.escape-story .project-overview h1 { font-size:clamp(1.8rem,3.3vw,2.6rem); line-height:1.15; margin:0.7rem 0 1.2rem; }
+.escape-project-label { font-size:0.95rem; color:var(--accent); font-weight:600; }
+.gift-card { position:relative; width:min(48%,170px); }
+.escape-story .gift-card img { width:100%; max-width:none; transform:none; }
+.gift-card:first-child { transform:rotate(-6deg); }.gift-card:last-child { transform:rotate(5deg); }
+.story-copy h3 { font-family:var(--font-display); font-size:clamp(1.4rem,2.6vw,2rem); line-height:1.2; margin:0 0 1rem; }
+.play-heading,.contribution-heading { max-width:70ch; margin-bottom:2rem; }
+.contribution-notebook .contribution-heading { margin-bottom:1.25rem; }
+.making-carousel { border:1px solid var(--line); border-radius:12px; padding:1.25rem; }
+.making-carousel-controls { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center; gap:1rem; margin-bottom:1rem; }
+.making-carousel-controls p { margin:0; text-align:center; font-size:0.9rem; }
+.making-carousel-controls .btn { display:grid; place-items:center; min-height:44px; padding:0; cursor:pointer; }
+.making-carousel-controls [aria-disabled="true"] { opacity:0.4; cursor:default; }
+.making-carousel .making-entry { padding:0.75rem 0; border:0; min-height:360px; }
+.making-carousel-shortcuts { display:flex; justify-content:center; gap:0.5rem; margin-top:1rem; }
+.making-carousel-shortcuts button { width:44px; height:44px; border:1px solid var(--line); border-radius:50%; color:var(--ink); background:transparent; font:inherit; cursor:pointer; }
+.making-carousel-shortcuts [aria-current] { background:var(--accent); color:var(--on-accent); border-color:var(--accent); font-weight:700; }
+.making-carousel .making-entry { min-height:0; align-items:start; gap:1.5rem; padding-block:1.25rem; }
+.making-carousel .making-entry > div:first-child > .story-kicker { display:none; }
+.making-carousel .making-entry h3 { margin:0 0 0.8rem; }
+.making-carousel-shortcuts { justify-content:flex-start; margin:0 0 0.5rem; flex-wrap:wrap; }
+.making-carousel-shortcuts button { width:auto; height:auto; min-height:44px; padding:0.5rem 0.85rem; border-radius:6px; }
+.making-carousel-controls { margin:0; padding-top:0.8rem; border-top:1px solid var(--line); }
+.escape-story .making-reflection .making-box { width:min(100%,330px); }
+.making-photo-controls { display:none; }
+.escape-zoom-link.making-photo-zoom { inset:0; width:100%; height:100%; border:0; border-radius:8px; background:transparent; font-size:0; }
+.making-photo-zoom::after { content:'⤢'; position:absolute; right:0.3rem; top:0.3rem; display:grid; place-items:center; width:28px; height:28px; border-radius:4px; border:1px solid #fff; background:#252525dc; color:#fff; font-size:1.2rem; }
+@media(max-width:700px) {
+  .making-carousel .making-entry { display:block; }
+  .making-carousel-shortcuts { gap:0.35rem; }
+  .making-carousel-shortcuts button { font-size:0.8rem; padding-inline:0.6rem; }
+  .making-carousel .making-photos.story-visual { position:relative; display:flex; justify-content:flex-start; width:100%; overflow-x:auto; scroll-snap-type:x mandatory; gap:1rem; margin-top:1rem; scrollbar-width:none; }
+  .making-carousel .making-photos figure { flex:0 0 100%; scroll-snap-align:start; }
+  .making-carousel .making-photos .photo-crop { width:min(100%,calc(350px * var(--crop-aspect))); }
+  .making-photo-controls { display:flex; justify-content:center; align-items:center; gap:1rem; margin:0.7rem 0 1rem; }
+  .making-photo-controls button { width:44px; height:44px; font:inherit; background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:6px; cursor:pointer; }
+  .making-photo-controls button:disabled { opacity:0.4; cursor:default; }
+  .making-photo-controls span { font-size:0.8rem; }
+  .making-reflection .making-box { margin-top:1rem; }
+}
+@media(max-width:700px) { .making-carousel { padding:0.8rem; }.making-carousel .making-entry { min-height:0; }.making-carousel-controls { gap:0.4rem; }.making-carousel-controls p { font-size:0.8rem; } }
+.card-examples { display:flex; gap:0.4rem; overflow-x:auto; }
+.escape-story #jouer { --play-card-height:270px; --play-card-width:147.55px; max-width:900px; margin-inline:auto; }
+.escape-story #jouer .play-heading { max-width:none; margin:0 0 1.25rem; }
+.escape-story #jouer .play-heading h2 { font-size:clamp(1.5rem,2.5vw,2rem); line-height:1.2; margin:0 0 0.65rem; }
+.escape-story #jouer .play-heading p { margin:0; color:var(--muted); }
+.escape-story #jouer .card-examples { margin:0; padding:0.75rem 1.25rem; border:1px solid var(--line); border-bottom:0; border-radius:12px 12px 0 0; background:var(--surface); }
+.card-examples a { flex-shrink:0; display:inline-flex; align-items:center; min-height:44px; padding:0.5rem 0.8rem; border-radius:7px; color:var(--ink); text-decoration:none; }
+.card-examples a[aria-current] { background:var(--accent); color:var(--on-accent); font-weight:700; }
+.escape-story #jouer .example-panel { display:grid; grid-template-columns:minmax(0,410px) minmax(0,330px); justify-content:center; align-items:center; gap:1.5rem; padding:1rem 1.25rem 1.25rem; border:1px solid var(--line); border-top:0; border-radius:0 0 12px 12px; background:var(--surface); }
+.escape-story #jouer .story-kicker { font-size:0.8rem; margin:0; }
+.escape-story #jouer .story-copy h3 { font-size:clamp(1.3rem,2vw,1.65rem); line-height:1.2; margin:0.5rem 0 0.75rem; }
+.escape-story #jouer .story-copy p { font-size:0.95rem; line-height:1.6; margin-block:0.65rem; }
+.escape-story #jouer .story-copy > .story-kicker { margin-top:0; }
+.escape-story #jouer .story-instruction { font-weight:600; }
+.escape-story #jouer h2:focus,.escape-story #jouer h3:focus { outline:none; }
+.escape-story #jouer .story-visual { display:flex; justify-content:center; align-items:start; gap:0.65rem; flex-wrap:nowrap; width:100%; margin:0; min-width:0; }
+.escape-story #jouer .story-card,
+.escape-story #jouer .observation-table .scene-card,
+.escape-story #jouer .observation-table .revealed-card,
+.escape-story #jouer .observation-table:has(#observe-result[hidden]) .scene-card,
+.escape-story #jouer .single-card { position:relative; display:block; flex:0 0 var(--play-card-width); width:var(--play-card-width); max-width:none; margin:0; }
+.escape-story #jouer .single-card { justify-self:center; }
+.escape-story #jouer .story-visual img { display:block; width:var(--play-card-width); height:var(--play-card-height); object-fit:contain; border-radius:8px; }
+.escape-story #jouer .card-choice { display:block; width:100%; margin:0; padding:0; background:transparent; border:0; border-radius:8px; color:var(--ink); }
+.escape-story #jouer .card-choice[aria-pressed="true"] { outline:2px solid var(--accent); outline-offset:4px; background:transparent; }
+.escape-story #jouer .choice-label { display:block; padding:0.6rem 0 0; min-height:36px; text-align:center; font-size:0.85rem; }
+.escape-story #jouer .association-plus { align-self:center; font-size:1.2rem; }
+.escape-story #jouer .revealed-card > span { font-size:0.8rem; line-height:1.4; margin-top:0.6rem; text-align:center; }
+.escape-story #jouer .story-takeaway { margin-top:1rem; padding-block:0.4rem; }
+.escape-story #jouer .story-takeaway > strong { font-size:1rem; }
+.escape-story #jouer .escape-zoom-link { position:absolute; inset:0; width:100%; height:var(--play-card-height); margin:0; background:transparent; border:0; border-radius:8px; font-size:0; cursor:zoom-in; }
+.escape-story #jouer .escape-zoom-link::after { content:'⤢'; position:absolute; right:0.3rem; bottom:0.3rem; display:grid; place-items:center; width:26px; height:26px; border:1px solid #fff; border-radius:4px; background:#252525d9; color:#fff; font-size:1.1rem; }
+.escape-story #jouer .choice-wrapper .escape-zoom-link { inset:auto 0 auto auto; top:calc(var(--play-card-height) - 44px); width:44px; height:44px; }
+.escape-story #jouer .guide-hotspot { z-index:2; }
+@media(max-width:700px) {
+  .escape-story #jouer { --play-card-height:220px; --play-card-width:120.22px; }
+  .escape-story #jouer .card-examples { position:sticky; top:var(--project-nav-offset,80px); z-index:10; padding:0.6rem; }
+  .escape-story #jouer .card-examples a { font-size:0.85rem; padding-inline:0.65rem; }
+  .escape-story #jouer .example-panel { grid-template-columns:minmax(0,1fr); gap:1rem; padding:1rem; scroll-margin-top:calc(var(--project-nav-offset,80px) + 75px); }
+}
+@media(max-width:360px) { .escape-story #jouer { --play-card-height:190px; --play-card-width:103.82px; } }
+
+.card-type { display:inline-block; padding:0.45rem 0.7rem; border-radius:5px; font-weight:700; }.card-type-code { background:#f0cf64; color:#30250a; }.card-type-machine { background:#b1d0a6; color:#183322; }
+.card-app-bridge { padding:1rem; margin-block:1rem; border:1px solid var(--line); border-left:4px solid var(--accent); border-radius:8px; background:var(--surface); }.card-app-bridge span,.card-app-bridge strong { display:block; }.card-app-bridge span { font-size:0.8rem; color:var(--muted); }
+.escape-story .story-card { width:min(44%,220px); max-width:none; }.escape-story .observation-table { flex-wrap:wrap; }.escape-story .observation-table .scene-card { width:min(80%,250px); max-width:none; }.escape-story .single-card { position:relative; display:block; width:min(100%,280px); margin:auto; }.single-card img { display:block; width:100%; height:auto; border-radius:10px; }
+.escape-story .guide-hotspot { background:#345d46; box-shadow:0 0 0 4px #345d4640; }.escape-story .card-choice[aria-pressed="true"] { background:var(--bg); outline-color:var(--accent); }
+.making-entry { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.2fr); gap:2rem; align-items:center; padding-block:2rem; border-top:1px solid var(--line); }.making-entry h3 { font-size:1.5rem; line-height:1.25; }.making-entry p { max-width:52ch; }
+.making-photos.story-visual { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; align-items:start; }.making-photos figure { position:relative; min-width:0; margin:0; }.making-photos img { width:100%; height:280px; object-fit:contain; background:var(--surface); border-radius:8px; }.making-photos figcaption,.making-box figcaption { font-size:0.8rem; color:var(--muted); line-height:1.5; margin-top:0.7rem; }
+.escape-story .making-box { position:relative; display:block; width:min(100%,250px); margin:auto; }.making-box img { width:100%; height:auto; border-radius:10px; }
+.photo-crop { position:relative; overflow:hidden; aspect-ratio:var(--crop-aspect); width:min(100%,calc(320px * var(--crop-aspect))); margin-inline:auto; border-radius:8px; }.escape-story .photo-crop img { position:absolute; width:var(--crop-width); height:var(--crop-height); max-width:none; left:var(--crop-left); top:var(--crop-top); object-fit:fill; border:0; border-radius:0; }
+.zoomable-card,.choice-wrapper { position:relative; }.choice-wrapper .card-choice { width:100%; }
+.escape-zoom-link { position:absolute; right:0.35rem; top:0.35rem; display:grid; place-items:center; width:44px; height:44px; background:#223e36eb; color:#fff; border:1px solid #fff; border-radius:6px; font-size:1.4rem; text-decoration:none; z-index:1; }
+.escape-zoom { background:var(--surface); color:var(--ink); border:1px solid var(--line); border-radius:12px; width:min(600px,calc(100% - 24px)); max-height:calc(100svh - 24px); padding:1rem; overflow:auto; }.escape-zoom::backdrop { background:#152b25e6; }.escape-zoom .btn { display:block; margin:0 0 1rem auto; cursor:pointer; min-height:44px; }.escape-zoom img { display:block; width:auto; max-width:100%; max-height:calc(100svh - 110px); margin:auto; }
+@media(max-width:700px) { .escape-story .project-overview,.making-entry { grid-template-columns:1fr; gap:1rem; }.escape-story .project-overview .gift-card { width:min(44%,140px); }.making-photos.story-visual { max-width:none; }.making-photos img { height:230px; }.escape-story .escape-phone,.escape-story #application .story-visual { display:none; }.escape-story #application .story-external { display:inline-flex; justify-content:center; padding:0.8rem 1rem; min-height:44px; border:1px solid var(--accent); border-radius:6px; } }
+.escape-story :is(h1,h2,h3)[tabindex="-1"]:focus-visible { outline:none; text-decoration:underline; text-decoration-color:var(--accent); text-decoration-thickness:.12em; text-underline-offset:.18em; }

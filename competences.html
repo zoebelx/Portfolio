@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Compétences — Zoé Schliefer Berlioux</title>
+    <meta name="description" content="Mes compétences en informatique et analyse de données, design et prototypage, gestion de projet et travail en équipe." />
+    <link rel="icon" type="image/png" href="assets/images/IconePage.png" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&amp;display=swap" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/competences.css" />
+    <link rel="stylesheet" href="assets/css/accessibility.css" />
+    <script src="assets/js/accessibility.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <div class="wrap">
+      <div class="top">
+        <a class="brand" href="index.html#top">Zoé Schliefer Berlioux</a>
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Ouvrir le menu">
+          <span class="menu-bars" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <div class="navigation-panel" id="mobile-navigation">
+        <nav aria-label="Sections">
+          <a href="index.html#projets">Projets</a>
+          <!-- Page À propos conservée dans a-propos.html pour une reprise ultérieure. -->
+          <a href="competences.html" aria-current="page">Compétences</a>
+          <a href="index.html#contact">Contact</a>
+        </nav>
+        <details class="comfort" id="comfort">
+          <summary>Confort de lecture</summary>
+          <div class="panel">
+            <button
+              class="toggle"
+              id="t-theme"
+              type="button"
+              aria-pressed="false"
+            >
+              Thème sombre
+            </button>
+            <button
+              class="toggle"
+              id="t-big"
+              type="button"
+              aria-pressed="false"
+            >
+              Texte plus grand
+            </button>
+            <button
+              class="toggle"
+              id="t-calm"
+              type="button"
+              aria-pressed="false"
+            >
+              Moins d'animations
+            </button>
+          </div>
+        </details>
+        </div>
+      </div>
+
+      <main id="main-content" class="skills-page" tabindex="-1">
+        <header class="skills-heading">
+          <h1>Mes compétences</h1>
+        </header>
+        <div class="skills-grid">
+          <section class="skill-domain domain-data" aria-labelledby="data-title">
+            <div class="domain-band"><span>Analyser &amp; développer</span><span aria-hidden="true">01</span></div>
+            <div class="domain-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="16" cy="7" rx="10" ry="4"/><path d="M6 7v18c0 5 20 5 20 0V7M6 13c0 5 20 5 20 0M6 19c0 5 20 5 20 0"/></svg></div>
+            <h2 id="data-title">Informatique &amp; Data</h2>
+            <p class="domain-description">Programmer des outils et analyser des données pour explorer un problème.</p>
+            <ul class="skills-list" aria-label="Outils et méthodes en informatique et données">
+              <li>Python</li><li>C#</li><li>SQL</li><li>R</li><li>Unity</li><li>JASP</li><li>Statistiques descriptives et inférentielles</li>
+            </ul>
+            <div class="skills-evidence"><h3>Ces compétences en action</h3><a href="projets/licence.html" aria-label="Découvrir le projet Projets Python">Projets Python <span aria-hidden="true">→</span></a><a href="projets/falc.html" aria-label="Découvrir le projet FALC">FALC <span aria-hidden="true">→</span></a><a href="projets/zinzin.html" aria-label="Découvrir le projet Zinzin">Zinzin <span aria-hidden="true">→</span></a></div>
+          </section>
+          <section class="skill-domain domain-design" aria-labelledby="design-title">
+            <div class="domain-band"><span>Imaginer &amp; fabriquer</span><span aria-hidden="true">02</span></div>
+            <div class="domain-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 25 4-11L23 3l6 6-12 13-11 3ZM10 14l7 8M20 6l6 6M6 25l6-6M4 29h24"/></svg></div>
+            <h2 id="design-title">Design &amp; Prototypage</h2>
+            <p class="domain-description">Passer d’une idée à un support concret, numérique ou fabriqué.</p>
+            <ul class="skills-list" aria-label="Outils de design et de prototypage">
+              <li>Canva</li><li>Découpe laser</li><li>Impression 3D</li><li>Conception d’interfaces</li><li>Tests utilisateurs</li>
+            </ul>
+            <div class="skills-evidence"><h3>Ces compétences en action</h3><a href="projets/escape.html" aria-label="Découvrir le projet Escape game">Escape game <span aria-hidden="true">→</span></a><a href="projets/addylink.html" aria-label="Addylink : fabrication et tests utilisateurs" title="Fabrication et tests utilisateurs">Addylink <span aria-hidden="true">→</span></a><a href="projets/zinzin.html" aria-label="Zinzin : conception d’interfaces" title="Conception d’interfaces">Zinzin <span aria-hidden="true">→</span></a></div>
+          </section>
+          <section class="skill-domain domain-human" aria-labelledby="human-title">
+            <div class="domain-band"><span>Organiser &amp; partager</span><span aria-hidden="true">03</span></div>
+            <div class="domain-symbol" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="10" r="5"/><path d="M2 29v-4a10 10 0 0 1 20 0v4M21 5a5 5 0 0 1 0 10M24 18a9 9 0 0 1 6 8v3"/></svg></div>
+            <h2 id="human-title">Gestion &amp; Humain</h2>
+            <p class="domain-description">Organiser le travail, échanger et rendre les idées compréhensibles.</p>
+            <ul class="skills-list" aria-label="Compétences de gestion et de travail avec les autres">
+              <li>Gestion de projet</li><li>Travail en équipe</li><li>Vulgarisation</li><li>Autonomie</li><li>Communication</li>
+            </ul>
+            <div class="skills-evidence"><h3>Ces compétences en action</h3><a href="projets/addylink.html" aria-label="Découvrir le projet Addylink">Addylink <span aria-hidden="true">→</span></a><a href="projets/escape.html" aria-label="Découvrir le projet Escape game">Escape game <span aria-hidden="true">→</span></a></div>
+          </section>
+        </div>
+        <div class="skills-bottom"><a class="btn primary" href="index.html#projets">Voir mes projets</a><a class="btn skills-contact" href="index.html#contact">Échanger avec moi ↗</a></div>
+      </main>
+      <footer><span>Zoé Schliefer Berlioux</span><span>Portfolio 2026</span></footer>
+    </div>
+    <script src="assets/js/navigation.js"></script>
+  </body>
+</html>

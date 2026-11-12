@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Analyser l’usage du FALC à l’école primaire — Zoé Schliefer Berlioux
+    </title>
+    <link rel="icon" href="../assets/images/IconePage.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="../assets/css/project-universes.css" />
+    <link rel="stylesheet" href="../assets/css/falc.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/project-navigation.css" />
+    <link rel="stylesheet" href="../assets/css/falc-shared.css" />
+    <script src="../assets/js/accessibility.js"></script>
+    <meta
+      name="description"
+      content="Stage d’analyse de données avec R : préparation, comparaison d’enquêtes et ACM."
+    />
+    <meta property="og:title" content="FALC — Zoé Schliefer Berlioux" />
+    <meta
+      property="og:description"
+      content="Stage d’analyse de données avec R : préparation, comparaison d’enquêtes et ACM."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Image relative tant que l'adresse publique du portfolio n'est pas configuree. -->
+    <meta property="og:image" content="../assets/images/social/falc.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Projet FALC : analyse de données" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="../assets/images/social/falc.jpg" />
+  </head>
+  <body data-project="falc">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <main id="main-content" tabindex="-1" class="wrap project-page falc-page">
+      <div class="preview-sticky">
+        <a class="back-link" href="../index.html#projets" aria-label="Retour aux projets">← Projets</a>
+      <nav class="preview-nav" aria-label="Dans ce projet"><a href="#apercu">Le projet</a><a href="#contribution">Ma contribution</a><a href="#methode">La méthode</a><a href="#retour">Mon retour</a></nav>
+        <details class="comfort" id="comfort">
+          <summary>Confort de lecture</summary>
+          <div class="panel">
+            <button
+              class="toggle"
+              id="t-theme"
+              type="button"
+              aria-pressed="false"
+            >
+              Thème sombre
+            </button>
+            <button
+              class="toggle"
+              id="t-big"
+              type="button"
+              aria-pressed="false"
+            >
+              Texte plus grand
+            </button>
+            <button
+              class="toggle"
+              id="t-calm"
+              type="button"
+              aria-pressed="false"
+            >
+              Moins d'animations
+            </button>
+          </div>
+        </details>
+      </div>
+      <header class="project-heading falc-heading" id="apercu">
+        <div class="falc-band"><span>Stage de première année</span><span>2026</span></div>
+        <div class="falc-intro">
+          <h1>Analyser l’usage du <span>FALC</span> à l’école primaire</h1>
+          <p class="project-subtitle">
+            Étudier l’utilisation réelle du facile à lire et à comprendre dans les écoles primaires, et son évolution depuis 2021.
+          </p>
+          <p>
+            Lors de ce stage avec une doctorante de l’ENSC, notre équipe a préparé et analysé les réponses de l’enquête de 2025 pour les comparer à celles de 2021.
+          </p>
+          <a
+            class="falc-definition"
+            href="https://falc.unapei.org/quest-ce-que-le-falc/le-falc-cest-quoi/"
+            target="_blank"
+            rel="noopener"
+            >Découvrir le FALC avec l’Unapei ↗</a
+          >
+        </div>
+        <div
+          class="project-metrics falc-metrics"
+          aria-label="Le stage en repères"
+        >
+          <div>
+            <strong>2 849</strong><span>réponses à l’enquête de 2025</span>
+          </div>
+          <div><strong>3</strong><span>personnes dans l’équipe</span></div>
+          <div>
+            <strong>R</strong><span>pour le traitement et l’analyse</span>
+          </div>
+        </div>
+      </header>
+      <section class="project-section falc-role" id="contribution" aria-labelledby="falc-contribution-title">
+        <p class="project-eyebrow">Ma contribution</p>
+        <h2 id="falc-contribution-title">Du tri des réponses à leur analyse</h2>
+        <p>
+          J’ai préparé les données pour l’analyse, notamment en corrigeant des <strong>codes postaux mal renseignés</strong>.
+        </p>
+        <p>J’ai ensuite comparé les enquêtes de 2021 et 2025 et réalisé une <strong>analyse des correspondances multiples (ACM) sous R</strong>, pour explorer les liens entre les réponses.</p>
+        <p class="falc-collective">
+          <strong>En équipe :</strong> nous avons créé des personas — des
+          profils types représentant les répondants — et documenté nos démarches
+          pour les transmettre à la doctorante.
+        </p>
+      </section>
+      <section class="project-section" id="methode" aria-labelledby="demarche">
+        <p class="project-eyebrow">La méthode</p>
+        <h2 id="demarche">
+          Des réponses brutes à une démarche documentée
+        </h2>
+        <div class="falc-method-gallery" role="region" aria-label="Les quatre étapes de la méthode">
+        <p class="falc-carousel-hint">Faites défiler les étapes ou utilisez les flèches.</p>
+        <ol class="falc-steps" id="falc-method-track">
+          <li>
+            <div class="falc-step-top">
+              <span class="falc-step-number" aria-hidden="true">01</span>
+              <svg viewBox="0 0 64 48" aria-hidden="true">
+                <rect x="5" y="5" width="54" height="38" rx="4" />
+                <path d="M5 17h54M5 30h54M23 5v38M42 5v38" />
+              </svg>
+            </div>
+            <h3>Fiabiliser la base</h3>
+            <p>
+              Constituer une base exploitable pour l’analyse.
+            </p>
+          </li>
+          <li>
+            <div class="falc-step-top">
+              <span class="falc-step-number" aria-hidden="true">02</span>
+              <div class="falc-year-pair" aria-hidden="true">
+                <span>2021</span><b>↔</b><span>2025</span>
+              </div>
+            </div>
+            <h3>Mettre les années en regard</h3>
+            <p>
+              Observer l’évolution de l’usage du FALC entre 2021 et 2025.
+            </p>
+          </li>
+          <li>
+            <div class="falc-step-top">
+              <span class="falc-step-number" aria-hidden="true">03</span>
+              <svg viewBox="0 0 64 48" aria-hidden="true">
+                <path d="M12 12l20 24 20-24M12 12h40M32 36V8" />
+                <circle cx="12" cy="12" r="5" />
+                <circle cx="52" cy="12" r="5" />
+                <circle cx="32" cy="36" r="5" />
+                <circle cx="32" cy="8" r="5" />
+              </svg>
+            </div>
+            <h3>Repérer des associations</h3>
+            <p>
+              Aller au-delà d’une lecture question par question.
+            </p>
+          </li>
+          <li>
+            <div class="falc-step-top">
+              <span class="falc-step-number" aria-hidden="true">04</span>
+              <svg viewBox="0 0 64 48" aria-hidden="true">
+                <circle cx="20" cy="15" r="7" />
+                <circle cx="45" cy="15" r="7" />
+                <path d="M7 42v-5a13 13 0 0126 0v5M34 42v-5a12 12 0 0124 0v5" />
+              </svg>
+            </div>
+            <h3>Permettre la reprise du travail</h3>
+            <p>
+              Permettre à la doctorante de poursuivre à partir du travail réalisé.
+            </p>
+          </li>
+        </ol>
+        <div class="falc-carousel-controls" hidden>
+          <button class="btn" type="button" id="falc-method-prev" aria-label="Étape précédente" aria-controls="falc-method-track">←</button>
+          <span id="falc-method-position" role="status" aria-live="polite">1 / 4</span>
+          <button class="btn" type="button" id="falc-method-next" aria-label="Étape suivante" aria-controls="falc-method-track">→</button>
+        </div>
+        </div>
+      </section>
+      <section
+        class="project-section falc-learning"
+        id="retour"
+        aria-labelledby="falc-apprentissages"
+      >
+        <p class="project-eyebrow">Mon retour d’expérience</p>
+        <h2 id="falc-apprentissages">Ce que j’emporte de ce stage</h2>
+        <div class="falc-learning-grid">
+          <div>
+            <h3>Faire des choix</h3>
+            <p>
+              J’ai appris à me demander quelles données nettoyer, et comment,
+              avant de commencer l’analyse.
+            </p>
+          </div>
+          <div>
+            <h3>Apprendre une méthode</h3>
+            <p>
+              J’ai découvert le fonctionnement de l’ACM et appris à la réaliser
+              sous R.
+            </p>
+          </div>
+          <div>
+            <h3>Travailler à trois</h3>
+            <p>
+              La coordination des fichiers et des analyses sous RStudio a été
+              une difficulté concrète du travail en équipe.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="../assets/js/project-sections.js"></script>
+    <script src="../assets/js/falc-method.js"></script>
+  </body>
+</html>

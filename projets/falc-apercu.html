@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>
+      Analyser l’usage du FALC à l’école primaire — Zoé Schliefer Berlioux
+    </title>
+    <link rel="icon" href="../assets/images/IconePage.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="../assets/css/project-universes.css" />
+    <link rel="stylesheet" href="../assets/css/falc.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/project-navigation.css" />
+    <link rel="stylesheet" href="../assets/css/falc-shared.css" />
+    <link rel="stylesheet" href="../assets/css/falc-apercu.css" />
+    <script src="../assets/js/accessibility.js"></script>
+    <meta
+      name="description"
+      content="Stage d’analyse de données avec R : préparation, comparaison d’enquêtes et ACM."
+    />
+    <meta property="og:title" content="FALC — Zoé Schliefer Berlioux" />
+    <meta
+      property="og:description"
+      content="Stage d’analyse de données avec R : préparation, comparaison d’enquêtes et ACM."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Image relative tant que l'adresse publique du portfolio n'est pas configuree. -->
+    <meta property="og:image" content="../assets/images/social/falc.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Projet FALC : analyse de données" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="../assets/images/social/falc.jpg" />
+  </head>
+  <body data-project="falc">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+
+    <main id="main-content" tabindex="-1" class="wrap project-page falc-page falc-notebook">
+      <div class="preview-sticky">
+        <a class="back-link" href="../index.html#projets" aria-label="Retour aux projets">← Projets</a>
+      <nav class="preview-nav" aria-label="Dans ce projet"><a href="#apercu">Le projet</a><a href="#contribution">Ma contribution</a><a href="#methode">La méthode</a><a href="#retour">Mon retour</a></nav>
+        <details class="comfort" id="comfort">
+          <summary>Confort de lecture</summary>
+          <div class="panel">
+            <button
+              class="toggle"
+              id="t-theme"
+              type="button"
+              aria-pressed="false"
+            >
+              Thème sombre
+            </button>
+            <button
+              class="toggle"
+              id="t-big"
+              type="button"
+              aria-pressed="false"
+            >
+              Texte plus grand
+            </button>
+            <button
+              class="toggle"
+              id="t-calm"
+              type="button"
+              aria-pressed="false"
+            >
+              Moins d'animations
+            </button>
+          </div>
+        </details>
+      </div>
+      <header class="project-heading falc-heading" id="apercu">
+        <div class="falc-band"><span>Stage de première année</span><span>2026</span></div>
+        <div class="falc-intro">
+          <h1>Analyser l’usage du <span>FALC</span> à l’école primaire</h1>
+          <p class="project-subtitle">
+            Comprendre une enquête sur le facile à lire et à comprendre.
+          </p>
+          <p>
+            Lors de ce stage avec une doctorante de l’ENSC, notre équipe a préparé et analysé les
+            réponses de 2025, puis les a comparées à l’enquête de 2021.
+          </p>
+          <a
+            class="falc-definition"
+            href="https://falc.unapei.org/quest-ce-que-le-falc/le-falc-cest-quoi/"
+            target="_blank"
+            rel="noopener"
+            >Découvrir le FALC avec l’Unapei ↗</a
+          >
+        </div>
+        <div
+          class="project-metrics falc-metrics"
+          aria-label="Le stage en repères"
+        >
+          <div>
+            <strong>2 849</strong><span>réponses à préparer et analyser</span>
+          </div>
+          <div><strong>3</strong><span>personnes dans l’équipe</span></div>
+          <div>
+            <strong>R</strong><span>pour le traitement et l’analyse</span>
+          </div>
+        </div>
+      </header>
+      <section class="project-section falc-role" id="contribution" aria-labelledby="falc-contribution-title">
+        <p class="project-eyebrow">Ma contribution</p>
+        <h2 id="falc-contribution-title">Du tri des réponses à leur analyse</h2>
+        <p>
+          J’ai pris en charge le <strong>nettoyage des données</strong>, la
+          <strong>comparaison des enquêtes de 2021 et 2025</strong> et une
+          analyse des correspondances multiples (<strong>ACM</strong>) pour
+          explorer les liens entre les réponses.
+        </p>
+        <p class="falc-collective">
+          <strong>En équipe :</strong> nous avons créé des personas — des
+          profils types représentant les répondants — et documenté nos démarches
+          pour les transmettre à la doctorante.
+        </p>
+      </section>
+      <section class="project-section notebook-method" id="methode" aria-labelledby="notebook-title">
+        <p class="project-eyebrow">Dans les coulisses du stage</p>
+        <h2 id="notebook-title">Comment j’ai travaillé sur l’enquête</h2>
+
+        <article class="notebook-entry">
+          <div class="notebook-copy">
+            <span class="notebook-index">01 / Préparer</span>
+            <h3>Commencer par les détails qui faussent la lecture.</h3>
+            <p>Nous avons notamment corrigé des codes postaux mal renseignés avant l’analyse des réponses.</p>
+            <p class="notebook-note">Une étape concrète du nettoyage des données, avant de comparer les enquêtes.</p>
+          </div>
+          <figure class="postcode-example">
+            <div class="example-band">Sur ma table de travail <span>Exemple fictif</span></div>
+            <div class="postcode-change">
+              <div><span>Avant</span><code>12<span class="code-space">␣</span>345</code><small>Une écriture à vérifier</small></div>
+              <span class="postcode-arrow" aria-hidden="true">→</span>
+              <div><span>Après</span><code>12345</code><small>Une écriture harmonisée</small></div>
+            </div>
+            <figcaption>Illustration de mise en forme, avec des chiffres inventés. Elle ne reproduit ni les données de l’enquête, ni un cas exact du stage.</figcaption>
+          </figure>
+        </article>
+
+        <article class="notebook-entry notebook-comparison">
+          <figure class="survey-comparison">
+            <div class="survey-sheet"><span>Enquête</span><strong>2021</strong><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i></div>
+            <div class="comparison-bridge"><span aria-hidden="true">↔</span><span>Mettre en regard</span></div>
+            <div class="survey-sheet"><span>Enquête</span><strong>2025</strong><i aria-hidden="true"></i><i aria-hidden="true"></i><i aria-hidden="true"></i></div>
+            <figcaption>Schéma de la démarche, sans réponses ni résultats.</figcaption>
+          </figure>
+          <div class="notebook-copy">
+            <span class="notebook-index">02 / Comparer et explorer</span>
+            <h3>Deux enquêtes à mettre en regard.</h3>
+            <p>J’ai comparé les enquêtes de 2021 et 2025 à l’aide de statistiques descriptives, puis réalisé une analyse des correspondances multiples sous R pour explorer les liens entre les réponses.</p>
+            <p class="notebook-note">Les résultats de l’enquête ne sont pas présentés ici.</p>
+          </div>
+        </article>
+
+        <article class="notebook-entry">
+          <div class="notebook-copy">
+            <span class="notebook-index">03 / Transmettre</span>
+            <h3>Laisser une démarche que l’on peut reprendre.</h3>
+            <p>En équipe, nous avons construit des personas et documenté nos démarches pour les transmettre à la doctorante.</p>
+          </div>
+          <div class="handover-note">
+            <span>À transmettre</span>
+            <ul><li>Les analyses réalisées</li><li>Les profils types des répondants</li><li>La documentation de la démarche</li></ul>
+            <p>Travail réalisé à trois</p>
+          </div>
+        </article>
+      </section>
+      <section
+        class="project-section falc-learning"
+        id="retour"
+        aria-labelledby="falc-apprentissages"
+      >
+        <p class="project-eyebrow">Mon retour d’expérience</p>
+        <h2 id="falc-apprentissages">Ce que j’emporte de ce stage</h2>
+        <div class="falc-learning-grid">
+          <div>
+            <h3>Faire des choix</h3>
+            <p>
+              J’ai appris à me demander quelles données nettoyer, et comment,
+              avant de commencer l’analyse.
+            </p>
+          </div>
+          <div>
+            <h3>Apprendre une méthode</h3>
+            <p>
+              J’ai découvert le fonctionnement de l’ACM et appris à la réaliser
+              sous R.
+            </p>
+          </div>
+          <div>
+            <h3>Travailler à trois</h3>
+            <p>
+              La coordination des fichiers et des analyses sous RStudio a été
+              une difficulté concrète du travail en équipe.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <script src="../assets/js/project-sections.js"></script>
+  </body>
+</html>

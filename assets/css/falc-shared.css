@@ -1,0 +1,92 @@
+/* Memes reperes de lecture que Python et Addylink, dans l'univers bleu de FALC. */
+body[data-project="falc"] { background: var(--bg); }
+.falc-page { max-width: 1040px; padding-top: 0; }
+.falc-page #apercu, .falc-page .project-section { scroll-margin-top: var(--project-nav-offset, 110px); }
+html[data-theme] body[data-project="falc"] .falc-heading,
+html[data-theme] body[data-project="falc"] .falc-role,
+html[data-theme] body[data-project="falc"] .falc-steps > li {
+  --bg: #f1eadb; --surface: #fff9ea; --ink: #21353d; --muted: #405159; --accent: #235a92; --on-accent: #fff9ea; --line: #8da0b3;
+  color: var(--ink); background: var(--surface); border: 2px solid #fff9ea; border-radius: 12px; box-shadow: 0 6px 0 #0003;
+}
+body[data-project="falc"] .falc-heading { padding: 0; gap: 1.5rem 2rem; overflow: hidden; margin-bottom: 2.5rem; }
+.falc-band { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 1rem; padding: 0.75rem 1.25rem; background: #a9caff; color: #182b47; font-size: 0.8rem; font-weight: 600; border-bottom: 1px solid #8da0b3; }
+.falc-intro { padding: 0 0 2rem 2rem; }
+.falc-heading .falc-metrics { padding: 0 2rem 2rem 0; }
+body[data-project="falc"] .falc-heading h1 { font-size: clamp(1.8rem, 3.5vw, 2.65rem); line-height: 1.13; max-width: none; margin-top: 0; }
+.falc-heading .project-subtitle { font-size: clamp(1.1rem, 2vw, 1.3rem); }
+.falc-intro > p { line-height: 1.7; }
+.falc-definition { min-height: 44px; padding-block: 0.6rem; }
+.falc-metrics > div, .falc-metrics > div:first-child { background: transparent; border: 0; border-left: 2px solid var(--line); border-radius: 0; padding: 0.5rem 0 0.5rem 1rem; }
+.falc-metrics strong { font-size: 1.8rem; }
+.falc-metrics span { font-size: 0.85rem; }
+.falc-page .project-section h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.2; }
+.falc-page .falc-role { padding: clamp(1.25rem, 3vw, 2rem); }
+.falc-page .falc-role p { line-height: 1.7; }
+.falc-page .falc-role .falc-collective { border-color: var(--line); }
+.falc-page .falc-steps > li { border-top: 4px solid #a9caff; }
+.falc-step-top svg { stroke: var(--accent); }
+.falc-step-top circle { fill: var(--bg); }
+.falc-page .falc-steps h3 { font-size: 1.15rem; }
+.falc-page .falc-steps p { line-height: 1.65; max-width: 45ch; }
+.falc-page .falc-learning { background: transparent; border: 0; border-top: 1px solid var(--line); border-radius: 0; padding: 1.5rem 0 0; }
+.falc-page .falc-learning-grid p { line-height: 1.65; }
+.falc-page .btn { min-height: 44px; }
+@media (max-width: 700px) {
+  .falc-intro { padding: 0 1.25rem; }
+  .falc-heading .falc-metrics { padding: 0 1.25rem 1.25rem; }
+  .falc-metrics > div, .falc-metrics > div:first-child { border: 0; border-top: 1px solid var(--line); padding: 0.7rem 0 0; }
+  .falc-metrics strong { font-size: 1.6rem; }
+}
+@media (max-width: 380px) {
+  .falc-metrics > div { gap: 0.7rem; }
+}
+
+/* La contribution raconte les actions ; la methode montre leur enchainement. */
+.falc-page .falc-role p { max-width: none; }
+.falc-page .falc-steps { gap: 1.5rem 2rem; }
+html[data-theme] body[data-project="falc"] .falc-page .falc-steps > li {
+  --ink: inherit; --accent: inherit; --on-accent: inherit; --line: inherit;
+  color: var(--ink); background: transparent; border: 0; border-left: 1px solid var(--line); border-radius: 0; box-shadow: none; padding: 0.5rem 0 0.5rem 1.25rem;
+}
+.falc-page .falc-step-top { min-height: 0; margin-bottom: 0.8rem; }
+.falc-page .falc-step-number { width: 2.2rem; height: 2.2rem; font-size: 1rem; border-radius: 50%; }
+.falc-page .falc-steps h3 { font-size: 1.1rem; }
+.falc-carousel-hint { display: none; font-size: 0.85rem; color: var(--muted); }
+.falc-carousel-controls { display: flex; justify-content: center; align-items: center; gap: 1rem; margin-top: 0.5rem; }
+.falc-carousel-controls[hidden] { display: none; }
+.falc-carousel-controls .btn { width: 44px; height: 44px; padding: 0; }
+.falc-carousel-controls .btn[aria-disabled="true"] { opacity: 0.45; cursor: default; }
+@media (max-width: 1024px) {
+  .falc-page .preview-sticky { margin-bottom: 1rem; }
+  body[data-project="falc"] .falc-heading { gap: 1rem 1.5rem; margin-bottom: 1.5rem; }
+  .falc-intro { padding: 0 0 1.25rem 1.25rem; }
+  .falc-heading .falc-metrics { padding: 0 1.25rem 1.25rem 0; gap: 0.4rem; }
+  .falc-heading .project-subtitle { margin-block: 0.7rem; }
+  .falc-intro > p:not(.project-subtitle) { margin-block: 0.7rem; }
+  .falc-page .project-section { margin-top: 1.75rem; }
+  .falc-page .falc-role { padding: 1.25rem; }
+  .falc-page .falc-role h2 { margin-block: 0.4rem 0.75rem; }
+  .falc-page .falc-role p:not(.project-eyebrow) { margin-block: 0.75rem; }
+  .falc-page .falc-role .falc-collective { padding-top: 0.75rem; margin-bottom: 0; }
+  .falc-page .falc-steps { gap: 1rem 1.5rem; }
+  .falc-page .falc-learning { padding-top: 1rem; }
+  .falc-learning h2 { margin-bottom: 1rem; }
+  .falc-page .falc-learning-grid { gap: 0.85rem; }
+}
+@media (max-width: 700px) {
+  .falc-intro { padding: 0 1.1rem; }
+  .falc-heading .falc-metrics { padding: 0 1.1rem 1.1rem; }
+  .falc-page .falc-role { padding: 1.1rem; }
+  .falc-band { padding: 0.6rem 1.1rem; }
+  .falc-learning-grid > div + div { padding-top: 0.75rem; }
+  .falc-page { padding-bottom: 2rem; }
+}
+@media (max-width: 600px) {
+  .falc-carousel-hint { display: block; }
+  .falc-page .falc-steps { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; padding: 0.3rem 0.2rem 0.8rem; scrollbar-width: thin; }
+  html[data-theme] body[data-project="falc"] .falc-page .falc-steps > li {
+    --ink: #21353d; --accent: #235a92; --on-accent: #fff9ea; --line: #8da0b3;
+    flex: 0 0 calc(100% - 1rem); min-width: 0; scroll-snap-align: start; color: var(--ink); background: #fff9ea; border: 2px solid #fff9ea; border-radius: 12px; box-shadow: 0 5px 0 #0003; padding: 1.25rem;
+  }
+  .falc-page .falc-steps > li:last-child { margin-right: 1rem; }
+}

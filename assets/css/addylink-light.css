@@ -1,0 +1,134 @@
+/* La version claire conserve les couleurs du projet dans chaque chapitre. */
+html[data-theme="light"] body.addylink-theme {
+  --bg: #e2eeeb;
+  --surface: #edf5f0;
+  --ink: #163b46;
+  --muted: #365962;
+  --line: #64848b;
+  --accent: #006879;
+  --on-accent: #ffffff;
+  background:
+    radial-gradient(ellipse at top right, #a4d8d6, transparent 55%), var(--bg);
+}
+html[data-theme="light"] .association-page .project-heading {
+  background: #b4dedb;
+  border-color: #44838c;
+  box-shadow: 0 6px 0 #8bbab9;
+}
+html[data-theme="light"] .association-page .project-heading::after {
+  background: #69b9bf;
+}
+html[data-theme="light"] body.addylink-theme .journey-nav {
+  background: #c6e4df;
+  border-color: #64848b;
+  box-shadow: 0 4px 12px #163b461a;
+}
+html[data-theme="light"] .journey-marker {
+  background: #c5dedc;
+  color: #163b46;
+}
+html[data-theme="light"] .journey-chapter.is-passed .journey-marker {
+  background: #3a818c;
+  color: #ffffff;
+}
+html[data-theme="light"] .journey-chapter.is-current .journey-marker {
+  background: #087081;
+  color: #ffffff;
+}
+html[data-theme="light"] .route-base {
+  stroke: #4c848a;
+  opacity: 0.4;
+}
+html[data-theme="light"] .route-fill {
+  stroke: #006879;
+  filter: none;
+}
+html[data-theme="light"] .association-page .prototype-section {
+  background: #cce7e7;
+  border-color: #64848b;
+}
+html[data-theme="light"] .association-page [aria-labelledby="intention"] {
+  background: #d4e8e2;
+  border-color: #64848b;
+}
+html[data-theme="light"] body.addylink-theme .play-cards > li {
+  background: #c5e4df;
+  border-color: #64848b;
+}
+html[data-theme="light"] body.addylink-theme .play-cards > li:nth-child(2) {
+  background: #cce7e7;
+}
+html[data-theme="light"] body.addylink-theme .play-cards > li:nth-child(3) {
+  background: #cce7e7;
+}
+html[data-theme="light"] .play-art {
+  background: #edf5f0;
+}
+html[data-theme="light"] .play-foot {
+  color: #365962;
+}
+html[data-theme="light"] .association-page .game-slide,
+html[data-theme="light"] .association-page .game-caption {
+  background: #cce4e6;
+  border-color: #64848b;
+}
+html[data-theme="light"] .association-page .game-preview {
+  background: #a7cdd3;
+}
+html[data-theme="light"] .association-page .association-role {
+  background: #baded7;
+  border-color: #64848b;
+  border-left-color: #006879;
+}
+html[data-theme="light"] .association-page .association-roles > div {
+  background: #d0e7e3;
+  border-color: #64848b;
+}
+html[data-theme="light"] .association-page .association-roles > div + div {
+  background: #d0e7e3;
+  border-color: #64848b;
+}
+html[data-theme="light"]
+  body.addylink-theme
+  :is(.game-table-modal, .game-lightbox, .demo-card-zoom) {
+  --ink: #163b46;
+  --muted: #365962;
+  --accent: #006879;
+  --on-accent: #ffffff;
+  --surface: #edf5f0;
+  --bg: #d5e9e4;
+  --line: #64848b;
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--line);
+}
+html[data-theme="light"] .turn-steps li[aria-current] {
+  background: #b4dedb;
+}
+html[data-theme="light"] .turn-situation {
+  background: #cce7e7;
+}
+html[data-theme="light"] .turn-effect-summary {
+  background: #c5e4df;
+}
+html[data-theme="light"] .turn-rule {
+  background: #d5e9e4;
+}
+
+html[data-theme="light"] .play-number {
+  color: var(--muted);
+}
+html[data-theme="light"] .play-foot {
+  border-color: #64848b;
+}
+html[data-theme="light"] .association-page .book-reader #lightbox-image {
+  background: #cce4e6;
+}
+html[data-theme="light"] .association-state {
+  color: var(--muted);
+}
+html[data-theme="light"] .association-page .association-roles > div,
+html[data-theme="light"] .association-page .association-roles > div + div {
+  background: transparent;
+  border-color: var(--line);
+}

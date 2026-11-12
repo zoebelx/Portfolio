@@ -1,0 +1,70 @@
+.workshop-work > h2, .python-workshop #preview-demo-title { font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.2; margin: 0 0 1.3rem; }
+.workshop-row { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(1.5rem, 5vw, 4rem); align-items: center; padding-block: 1.5rem 2.5rem; border-bottom: 1px dashed var(--line); }
+.workshop-route { grid-template-columns: 1fr 1.2fr; padding-top: 2.5rem; }
+.workshop-copy h3 { font-size: clamp(1.3rem, 2.3vw, 1.7rem); line-height: 1.25; margin: 0.7rem 0 1rem; }
+.workshop-copy p { max-width: 45ch; font-size: 1rem; line-height: 1.7; }
+.workshop-index { font-size: 0.8rem; color: var(--accent); }
+.workshop-observation { color: var(--muted); font-size: 0.9rem !important; }
+.workshop-jump { display: inline-block; padding-block: 0.6rem; font-size: 0.9rem; text-underline-offset: 0.25em; }
+.pixel-study, .route-study { margin: 0; overflow: hidden; background: #fff9ea; color: #21353d; border-radius: 5px; box-shadow: 0 5px 0 #0003; }
+.study-label { display: block; padding: 0.6rem 1rem; border-bottom: 1px solid #21353d33; background: #dce9ff; color: #182a44; font-size: 0.8rem; }
+.pixel-study-grid { display: flex; justify-content: center; align-items: center; gap: 1rem; padding: 1.5rem; background-image: linear-gradient(#235a920b 1px, transparent 1px), linear-gradient(90deg, #235a920b 1px, transparent 1px); background-size: 18px 18px; }
+.pixel-study-grid img { display: block; width: min(65%, 185px); height: auto; border: 1px solid #21353d44; image-rendering: pixelated; }
+.grid-dimension { writing-mode: vertical-rl; color: #235a92; font-size: 0.8rem; letter-spacing: 0.05em; }
+.pixel-study figcaption, .route-study figcaption { padding: 0.65rem 1rem; font-size: 0.75rem; border-top: 1px solid #21353d22; }
+.route-terminal { position: relative; overflow: hidden; aspect-ratio: 738 / 324; background: #273132; }
+.route-terminal img { position: absolute; width: 185.1%; max-width: none; height: auto; left: -4.74%; top: -85.8%; }
+.route-study a { display: block; }
+.route-study a:focus-visible { outline-offset: -3px; outline-color: #91bcff; }
+.python-workshop .preview-canva { margin-top: 1.5rem; }
+.python-workshop #reseau { margin-top: 3rem; }
+.python-workshop .network-lab { --bg: #f0e8d6; --surface: #fff9ea; --ink: #21353d; --muted: #405159; --accent: #235a92; --on-accent: #fff9ea; --line: #657b84; color: #21353d; padding: 1.25rem; border: 2px solid #fff9ea; border-radius: 16px; background-color: #fff9ea; background-image: radial-gradient(circle, #235a9226 1px, transparent 1px); background-size: 20px 20px; box-shadow: 0 8px 0 #0004; }
+.python-workshop #lab-title { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem; background: #91bcff; color: #182a44; padding: 0.7rem 1.25rem; margin: -1.25rem -1.25rem 1.25rem; font-size: 0.85rem; border-radius: 13px 13px 0 0; }
+body[data-project="licence"] .python-workshop .network-lab { border-top: 2px solid #fff9ea; box-shadow: 0 8px 0 #0004; }
+.python-workshop .network-toolbar { margin-bottom: 0.6rem; }
+.network-actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.6rem; margin-bottom: 1.3rem; }
+@media (min-width: 541px) {
+  .python-workshop .network-lab { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1rem; }
+  .python-workshop #lab-title, .python-workshop .network-grids, .python-workshop .network-caution, .python-workshop .network-keyboard, .python-workshop .network-lab > noscript { grid-column: 1 / -1; }
+  .python-workshop .network-toolbar { grid-column: 1; margin-bottom: 1.3rem; }
+  .python-workshop .network-actions { grid-column: 2; align-items: center; }
+}
+@media (min-width: 541px) and (max-width: 1100px) {
+  .python-workshop .network-toolbar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 0.5rem; align-content: start; }
+  .python-workshop .network-toolbar label { align-self: center; }
+  .python-workshop .network-toolbar #network-random, .python-workshop .network-toolbar #network-reset { grid-column: 1 / -1; width: 100%; }
+  .python-workshop .network-actions { align-self: stretch; align-content: end; align-items: end; }
+  .python-workshop .network-actions .btn { width: 100%; }
+}
+.python-workshop .network-grids { gap: 0.7rem; align-items: start; }
+.python-workshop .network-grids figcaption { min-height: 3.2rem; }
+.python-workshop .network-arrow { align-self: start; margin-top: calc(3.2rem + min(20vw, 22svh)); }
+.python-workshop .network-grids figure { padding: 0.8rem; background: #fffdf7; border: 1px solid #21353d44; border-radius: 3px; }
+.python-workshop .network-grids figcaption strong { font-size: 0.85rem; color: #235a92; }
+.python-workshop .network-limitation { margin: 0.8rem 0; border: 0; border-radius: 0; padding: 0; background: none; font-size: 0.85rem; color: #405159; line-height: 1.6; }
+.python-workshop .network-status { font-size: 0.9rem; line-height: 1.6; }
+.python-workshop .network-help { line-height: 1.6; }
+.python-workshop .network-status { margin: 0.8rem 0 0; padding: 0.8rem 1rem; background: #dce9ff; color: #182a44; border: 0; border-left: 4px solid #235a92; border-radius: 3px; font-size: 1.05rem; font-weight: 700; min-height: 3rem; }
+.python-workshop .network-status.is-error { background: #fff0d8; color: #743600; border-left-color: #a74f00; }
+.network-legend { display: flex; align-items: center; gap: 0.45rem; }
+.network-legend i { display: inline-block; width: 0.75rem; height: 0.75rem; border: 2px solid #c77d1e; background: #fff0d8; }
+.network-notes { margin-top: 1rem; padding-top: 0.8rem; border-top: 1px solid #21353d33; font-size: 0.85rem; color: #405159; }
+.network-notes summary { cursor: pointer; padding-block: 0.4rem; }
+.network-notes p { max-width: 65ch; line-height: 1.6; }
+.network-caution { margin: 1rem 0 0.5rem; color: #405159; font-size: 0.85rem; line-height: 1.6; }
+.network-keyboard { font-size: 0.85rem; color: #405159; }
+.network-keyboard summary { cursor: pointer; padding: 0.6rem 0; text-decoration: underline; text-underline-offset: 0.2em; }
+.network-keyboard p { line-height: 2; margin-top: 0.3rem; }
+.network-keyboard kbd { font: inherit; font-size: 0.85em; padding: 0.2rem 0.4rem; border: 1px solid #657b84; border-radius: 3px; background: #fffdf7; box-shadow: 0 2px 0 #21353d22; white-space: nowrap; }
+@media (max-width: 540px) {
+  .python-workshop .network-arrow { margin: 0; align-self: auto; }
+  .python-workshop .network-grids figcaption { min-height: 0; }
+}
+@media (max-width: 700px) {
+  .workshop-row, .workshop-route { grid-template-columns: 1fr; gap: 1.3rem; padding-block: 1rem 1.8rem; }
+  .workshop-copy h3 br { display: none; }
+  .pixel-study { max-width: 420px; width: 100%; }
+  .workshop-route { margin-top: 1rem; }
+  .python-workshop .network-lab { padding: 1rem; }
+  .python-workshop #lab-title { margin: -1rem -1rem 1rem; padding-inline: 1rem; }
+}

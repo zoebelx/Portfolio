@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Aperçu — Projets Python de licence</title>
+    <link rel="icon" href="../assets/images/IconePage.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/project.css" />
+    <link rel="stylesheet" href="../assets/css/reseau.css" />
+    <link rel="stylesheet" href="../assets/css/project-universes.css" />
+    <link rel="stylesheet" href="../assets/css/accessibility.css" />
+    <link rel="stylesheet" href="../assets/css/project-preview.css" />
+    <meta name="robots" content="noindex" />
+    <script src="../assets/js/accessibility.js"></script>
+    <meta
+      name="description"
+      content="Démonstration interactive du réseau récurrent Python de Zoé Schliefer Berlioux."
+    />
+    <meta property="og:title" content="Réseau récurrent — Démo interactive" />
+    <meta
+      property="og:description"
+      content="Démonstration interactive du réseau récurrent Python de Zoé Schliefer Berlioux."
+    />
+    <meta property="og:type" content="website" />
+    <!-- Image relative tant que l'adresse publique du portfolio n'est pas configuree. -->
+    <meta property="og:image" content="../assets/images/social/licence.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Démo du réseau récurrent" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="../assets/images/social/licence.jpg" />
+  </head>
+  <body data-project="licence">
+    <a class="skip-link" href="#main-content">Aller au contenu</a>
+    <main id="main-content" tabindex="-1" class="wrap project-page project-preview">
+      <a class="back-link" href="../index.html#projets">← Retour aux projets</a>
+      <header class="preview-hero" id="apercu">
+        <div class="preview-band"><span>2025 · Licence · Projets individuels</span><span>Python</span></div>
+        <div class="preview-hero-content">
+          <div><p class="preview-eyebrow">Informatique &amp; données</p><h1>Deux projets Python,<br />deux problèmes à explorer.</h1><p>Reconnaître une lettre déformée et rechercher un itinéraire court entre quinze villes.</p><a class="btn primary" href="#reseau">Essayer le réseau ↓</a></div>
+          <figure><img src="../assets/images/projetlience.png" alt="Une lettre A altérée puis reconstruite par le réseau." /><figcaption>Du dessin altéré à la lettre reconstruite.</figcaption></figure>
+        </div>
+      </header>
+      <nav class="preview-nav" aria-label="Dans ce projet"><a href="#apercu">Le projet</a><a href="#contribution">Ma contribution</a><a href="#reseau">La démo</a></nav>
+      <section class="preview-contribution" id="contribution" aria-labelledby="preview-role-title">
+        <div class="preview-section-heading"><span class="preview-number" aria-hidden="true">01</span><h2 id="preview-role-title">Ce que j’ai développé</h2></div>
+        <div class="preview-role-grid">
+          <div><h3>Reconnaissance de lettres</h3><p>Adaptation du réseau en 16 × 16 pixels et création de son interface avec Tkinter.</p></div>
+          <div><h3>Recherche d’itinéraire</h3><p>Développement d’un algorithme génétique : sélection, croisements et mutations pour rechercher un circuit court.</p></div>
+        </div>
+        <a class="preview-canva" href="https://projetacademique.my.canva.site/l2scienceco/" target="_blank" rel="noopener noreferrer">Découvrir les deux projets sur Canva ↗</a>
+      </section>
+
+      <section id="reseau" aria-labelledby="preview-demo-title">
+        <div class="preview-section-heading"><span class="preview-number" aria-hidden="true">02</span><h2 id="preview-demo-title">À vous d’essayer</h2></div>
+        <p class="preview-demo-intro">Modifiez quelques pixels, puis observez la reconstruction. Cette adaptation web permet de découvrir le principe du projet Python.</p>
+        <p class="network-limitation">
+          Ce réseau expérimental peut se tromper : une lettre modifiée peut être
+          confondue avec une autre ou ne pas être reconnue.
+        </p>
+        <div class="network-lab" aria-labelledby="lab-title">
+          <h3 id="lab-title">Modifiez quelques cases, puis lancez le réseau</h3>
+          <div class="network-toolbar">
+            <label for="network-letter">Lettre de départ</label
+            ><select
+              id="network-letter"
+              aria-label="Choisir une lettre"
+            ></select
+            ><button type="button" class="btn" id="network-load">
+              Charger la lettre</button
+            ><button type="button" class="btn" id="network-random">
+              Lettre aléatoire
+            </button>
+          </div>
+          <div class="network-grids">
+            <figure>
+              <figcaption>
+                <strong>Votre lettre</strong
+                ><span>Cliquez sur les cases pour modifier la lettre.</span>
+              </figcaption>
+              <canvas
+                id="network-input"
+                width="384"
+                height="384"
+                tabindex="0"
+                aria-label="Grille de 16 par 16 pixels. Dessinez à la souris ou au doigt. Au clavier : flèches pour choisir une case, Espace pour l’inverser."
+              ></canvas>
+            </figure>
+            <div class="network-arrow" aria-hidden="true">→</div>
+            <figure>
+              <figcaption>
+                <strong>Sortie du réseau</strong
+                ><span>Orange : pixels modifiés par le réseau.</span>
+              </figcaption>
+              <canvas
+                id="network-output"
+                width="384"
+                height="384"
+                aria-label="Résultat de la reconstruction par le réseau"
+              ></canvas>
+            </figure>
+          </div>
+          <div class="cta">
+            <button type="button" class="btn primary" id="network-run">
+              Reconstruire la lettre</button
+            ><button type="button" class="btn" id="network-reset">
+              Réinitialiser
+            </button>
+          </div>
+          <p
+            id="network-status"
+            class="network-status"
+            tabindex="-1"
+            role="status"
+            aria-live="polite"
+          >
+            Chargez une lettre, cliquez sur quelques cases pour la modifier,
+            puis lancez le réseau.
+          </p>
+          <p class="network-help">
+            Au clavier : utilisez les flèches pour choisir une case, puis la
+            touche Espace pour la remplir ou l’effacer.
+          </p>
+          <noscript>Activez JavaScript pour essayer le réseau.</noscript>
+        </div>
+      </section>
+      <div class="cta">
+        <a class="btn" href="../index.html#projets"
+          >← Voir les autres projets</a
+        >
+      </div>
+    </main>
+    <script src="../assets/js/reseau-data.js?v=original-learning-selected-3"></script>
+    <script src="../assets/js/reseau-engine.js"></script>
+    <script src="../assets/js/reseau-demo.js?v=feedback-5"></script>
+  </body>
+</html>

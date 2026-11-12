@@ -1,0 +1,536 @@
+.table-launch {
+  margin-top: 1.5rem;
+}
+body.table-open {
+  overflow: hidden;
+}
+dialog.game-table-modal {
+  width: min(980px, calc(100% - 24px));
+  max-height: calc(100svh - 24px);
+  overflow-y: auto;
+  padding: clamp(1rem, 3vw, 1.6rem);
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+.game-table-modal::backdrop,
+.demo-card-zoom::backdrop {
+  background: #061d29df;
+}
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.table-header h2 {
+  font: 700 clamp(1.2rem, 3vw, 1.6rem) var(--font-display);
+  margin: 0;
+}
+.table-header > .btn {
+  font-size: 1.6rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.1rem 0.7rem;
+  flex: none;
+}
+.turn-steps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  list-style: none;
+  counter-reset: turn;
+  margin: 0 0 1.3rem;
+  padding: 0;
+}
+.turn-steps li {
+  counter-increment: turn;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.85rem;
+  border-bottom: 3px solid var(--line);
+  color: var(--muted);
+}
+.turn-steps li::before {
+  content: counter(turn) ". ";
+  font-family: var(--font-mono);
+  display: block;
+}
+.turn-steps li[aria-current] {
+  border-color: var(--accent);
+  color: var(--ink);
+  font-weight: 700;
+  background: var(--bg);
+  border-radius: 6px 6px 0 0;
+}
+.turn-steps li.is-complete {
+  border-color: var(--accent);
+}
+.turn-panel[hidden],
+.game-table-modal [hidden] {
+  display: none !important;
+}
+.turn-panel > h3 {
+  font: 700 clamp(1.2rem, 3vw, 1.5rem) var(--font-display);
+  margin: 0.5rem 0 1rem;
+}
+.turn-panel > p {
+  max-width: 75ch;
+}
+.turn-panel .chapter-label {
+  font-size: 0.8rem;
+  margin: 0;
+  color: var(--accent);
+}
+.turn-situation {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+.turn-situation h4 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+}
+.turn-situation p {
+  margin: 0;
+}
+.event-card-zoom {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  cursor: zoom-in;
+}
+.event-card-zoom img {
+  display: block;
+  width: 100%;
+  height: 95px;
+  object-fit: contain;
+}
+.event-card-zoom span {
+  display: block;
+  font-size: 0.8rem;
+  text-decoration: underline;
+  margin-top: 0.4rem;
+}
+.turn-rule {
+  font-size: 0.95rem;
+  padding: 0.8rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: var(--bg);
+  border-radius: 0 8px 8px 0;
+  line-height: 1.5;
+}
+.turn-resource-note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.table-hand {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.table-card {
+  min-width: 0;
+  text-align: center;
+}
+.choose-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink);
+  background: var(--bg);
+  border: 2px solid var(--line);
+  border-radius: 10px;
+}
+.choose-card > img {
+  display: block;
+  width: 100%;
+  height: clamp(180px, 31svh, 265px);
+  object-fit: contain;
+}
+.choose-caption {
+  display: block;
+  padding: 0.6rem 0.2rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.choose-card[aria-pressed="true"] {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+.card-magnify {
+  font: inherit;
+  font-size: 0.85rem;
+  background: transparent;
+  color: var(--ink);
+  border: 0;
+  text-decoration: underline;
+  min-height: 44px;
+  padding: 0.3rem;
+  cursor: zoom-in;
+}
+#turn-selection {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent);
+  min-height: 1.5em;
+}
+.turn-flip-card {
+  display: block;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  color: var(--ink);
+  font: inherit;
+  cursor: zoom-in;
+}
+.turn-flip-card img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: min(39svh, 320px);
+  object-fit: contain;
+  margin: auto;
+}
+.turn-flip-card span {
+  display: block;
+  font-size: 0.85rem;
+  padding: 0.5rem;
+  text-decoration: underline;
+}
+#turn-flip-panel > .cta {
+  justify-content: center;
+}
+.turn-effects-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 1rem 0;
+}
+.turn-effects-layout p:first-child {
+  margin-top: 0;
+}
+.turn-effect-summary {
+  padding: 0.7rem;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-weight: 700;
+  line-height: 1.7;
+}
+.player-board {
+  min-width: 0;
+}
+.board-title {
+  font: 700 1.1rem var(--font-display);
+  margin: 0 0 0.7rem;
+}
+.cathy-board-art {
+  position: relative;
+  width: 210px;
+  max-width: 100%;
+  aspect-ratio: 253/285;
+  isolation: isolate;
+  border-radius: 7px;
+  overflow: hidden;
+}
+.cathy-board-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cathy-relation-pawn {
+  position: absolute;
+  left: 80%;
+  top: calc(13.4% + var(--relation-steps, 2) * 7.8%);
+  width: 15px;
+  height: 15px;
+  background: #c8863d;
+  border: 2px solid #684123;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 3px #35231488;
+  z-index: 2;
+}
+.cathy-energy-pile {
+  position: absolute;
+  left: 12%;
+  top: 45%;
+  width: 43%;
+  height: 35%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-content: center;
+  justify-items: center;
+  gap: 3px;
+}
+.energy-token {
+  display: grid;
+  place-items: center;
+  width: 21px;
+  height: 21px;
+  background: #e8cc84;
+  color: #382f1b;
+  border: 2px solid #bc9a4f;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.energy-token.is-spent {
+  opacity: 0.22;
+  filter: grayscale(1);
+}
+.energy-token.is-gained {
+  border-color: #fff4c0;
+}
+.cathy-board-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  margin-top: 0.7rem;
+}
+.cathy-board-values strong {
+  color: var(--accent);
+}
+.board-change {
+  font-size: 0.85rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.turn-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.3rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: 0.85rem;
+}
+.turn-panel .btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+dialog.demo-card-zoom {
+  width: min(640px, calc(100% - 20px));
+  max-height: calc(100svh - 20px);
+  overflow-y: auto;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+#demo-zoom-image {
+  display: block;
+  width: 100%;
+  height: min(72svh, 700px);
+  object-fit: contain;
+}
+@media (max-width: 600px) {
+  dialog.game-table-modal {
+    width: calc(100% - 12px);
+    max-height: calc(100svh - 12px);
+    padding: 1rem;
+  }
+  .turn-steps {
+    gap: 0.25rem;
+  }
+  .turn-steps li {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.15rem;
+  }
+  .turn-situation {
+    grid-template-columns: 1fr;
+  }
+  .event-card-zoom {
+    width: 150px;
+    margin: auto;
+  }
+  .table-hand {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.8rem;
+    padding: 0.3rem;
+  }
+  .table-card {
+    flex: 0 0 86%;
+    scroll-snap-align: center;
+  }
+  .choose-card > img {
+    height: 280px;
+  }
+  .turn-effects-layout {
+    grid-template-columns: 1fr;
+  }
+  .turn-effects-layout .player-board {
+    order: -1;
+  }
+  .player-board {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0.6rem 1rem;
+    padding: 1rem;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+  .board-title {
+    grid-column: 1/-1;
+  }
+  .cathy-board-art {
+    width: 140px;
+    grid-row: 2/4;
+  }
+  .cathy-board-values {
+    margin: 0;
+    flex-direction: column;
+  }
+  .board-change {
+    margin: 0;
+  }
+  .cathy-relation-pawn {
+    width: 12px;
+    height: 12px;
+  }
+  .energy-token {
+    width: 16px;
+    height: 16px;
+    font-size: 0.8rem;
+  }
+  .turn-panel > .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  .turn-footer {
+    gap: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .turn-footer .btn {
+    font-size: 0.8rem;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .turn-flip-card img.is-flipped {
+    animation: turn-card-in 0.3s ease-out;
+  }
+  @keyframes turn-card-in {
+    from {
+      transform: perspective(700px) rotateY(70deg);
+      opacity: 0.3;
+    }
+    to {
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 360px) {
+  .turn-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .turn-steps li::before {
+    display: inline;
+  }
+}
+
+#turn-result[hidden] {
+  display: none !important;
+}
+#turn-result .turn-effects-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 340px);
+  gap: 2rem;
+  align-items: start;
+}
+#turn-result .turn-flip-card {
+  display: block;
+  width: 180px;
+  margin: 0 auto 1rem;
+}
+#turn-result .turn-flip-card img {
+  max-height: 260px;
+}
+#turn-result .cathy-board-art {
+  width: 100%;
+  max-width: 310px;
+  margin-inline: auto;
+}
+#turn-result .cathy-board {
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 12px;
+}
+#turn-result .cathy-board-values {
+  justify-content: center;
+}
+#turn-result .board-change {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  #turn-result .turn-effects-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1rem;
+  }
+  #turn-result .player-board {
+    order: 0;
+    display: block;
+  }
+  #turn-result .cathy-board-art {
+    width: 230px;
+    max-width: 100%;
+  }
+  #turn-result .turn-flip-card {
+    width: 140px;
+  }
+  #turn-result .turn-flip-card img {
+    max-height: 210px;
+  }
+  .turn-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Titres des deux colonnes sur une meme ligne, position initiale conservee. */
+#turn-result .turn-effects-layout > div:first-child {
+  padding-top: 1rem;
+}
+#turn-result :is(#turn-flip-title, .board-title) {
+  font: 700 1.25rem var(--font-display);
+  line-height: 1.3;
+  margin: 0 0 1rem;
+}
+.cathy-relation-pawn.is-previous {
+  opacity: 0.35;
+  box-shadow: none;
+  border-style: dashed;
+}
+.cathy-relation-pawn[hidden],
+.board-relation-legend[hidden] {
+  display: none;
+}
+.board-relation-legend {
+  font-size: 0.8rem;
+  color: var(--muted);
+  text-align: center;
+  margin: 0.5rem 0;
+}

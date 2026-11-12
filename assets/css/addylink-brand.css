@@ -1,0 +1,76 @@
+/* Interface Addylink : creme, bordeaux et rose. Le turquoise reste dans les images. */
+body.addylink-theme {
+  --bg: #211d20;
+  --surface: #30272d;
+  --ink: #fcfcf3;
+  --muted: #e7d8df;
+  --line: #a98a9a;
+  --accent: #ee7297;
+  --on-accent: #3a2530;
+  background: var(--bg);
+}
+html[data-theme="light"] body.addylink-theme {
+  --bg: #f5efed;
+  --surface: #fcfcf3;
+  --ink: #4b2033;
+  --muted: #644450;
+  --line: #987180;
+  --accent: #a33d66;
+  --on-accent: #fcfcf3;
+  background: var(--bg);
+}
+.association-page .project-heading,
+html[data-theme="light"] .association-page .project-heading {
+  --ink: #4b2033; --muted: #644450; --accent: #a33d66; --on-accent: #fcfcf3; --line: #b18a9a;
+  background: #fcfcf3; border-color: #fcfcf3; color: var(--ink);
+}
+.association-page .project-heading .association-band { background: #a33d66; color: #fcfcf3; border-color: #a33d66; }
+.association-page .association-hero-body { background-image: radial-gradient(#a33d661a 1px, transparent 1px); }
+.association-brand-crop { position: relative; overflow: hidden; width: 100%; max-width: 300px; aspect-ratio: 1; margin-inline: auto; border-radius: 8px; background: #a03a66; }
+.association-hero-photo .association-brand-crop img { position: absolute; display: block; width: 300%; max-width: none; height: auto; left: -200%; top: -89.8734%; border: 0; border-radius: 0; }
+.association-page .journey-marker,
+html[data-theme="light"] .association-page .journey-marker { background: #ee7297; color: #4b2033; border-color: var(--bg); }
+.association-page .journey-chapter.is-current .journey-marker,
+html[data-theme="light"] .association-page .journey-chapter.is-current .journey-marker { background: #fcfcf3; color: #a33d66; box-shadow: 0 0 0 2px #ee7297; }
+.association-page .journey-route .route-fill { stroke: #ee7297; }
+html[data-theme="light"] .association-page .journey-route .route-fill { stroke: #a33d66; }
+.association-page .journey-route .route-base { stroke: var(--line); }
+.association-page .game-practical { color: var(--accent); }
+.association-page .association-role { border-top-color: #ee7297; }
+html[data-theme="light"] .association-page .association-role { border-top-color: #a33d66; }
+
+html[data-theme] body.addylink-theme .association-page :is(.prototype-section, .play-cards > li, .play-cards > li:nth-child(2), .play-cards > li:nth-child(3), .game-slide, .game-caption) {
+  --ink: #4b2033; --muted: #644450; --accent: #a33d66; --on-accent: #fcfcf3; --line: #b18a9a;
+  color: var(--ink); background: #fcfcf3; border-color: #fcfcf3;
+}
+.association-page .prototype-band { background: #e7a9be; color: #4b2033; border-bottom-color: #b18a9a; }
+html[data-theme] body.addylink-theme .association-page :is(.play-art, .game-preview) { background: #f2e8ec; }
+html[data-theme] .association-page :is(.play-number, .game-index, .addylink-contribution h3, .addylink-contribution h4) { color: #a33d66; }
+html[data-theme] .association-page :is(.play-foot, .game-caption p) { color: #644450; }
+.association-page .prototype-test-result { background: #f7e9ee; color: #4b2033; border-left-color: #a33d66; }
+.addylink-theme .btn.primary { color: #fcfcf3; background: #a33d66; border-color: #a33d66; }
+.addylink-theme .btn.primary:hover { color: #fcfcf3; background: #86274e; border-color: #86274e; }
+.addylink-theme .project-heading .btn.primary { color: #4b2033; background: #ee7297; border-color: #ee7297; }
+.addylink-theme .project-heading .btn.primary:hover { color: #4b2033; background: #f59ab5; border-color: #f59ab5; }
+.association-page .preview-hint,
+.association-page .game-preview:hover .preview-hint,
+.association-page .game-preview:focus-visible .preview-hint { color: #fcfcf3; background: #4b2033; border-color: #fcfcf3; }
+.association-page .play-cards :focus-visible,
+.association-page .game-slide :focus-visible { outline-color: #a33d66; }
+
+/* Le lecteur et la demonstration utilisent la meme palette que les fiches. */
+html[data-theme] body.addylink-theme :is(#turn-dialog, #game-lightbox, #demo-card-zoom) {
+  --bg: #f2e8ec; --surface: #fcfcf3; --ink: #4b2033; --muted: #644450; --accent: #a33d66; --on-accent: #fcfcf3; --line: #b18a9a;
+  color: var(--ink); background: var(--surface); border-color: #fcfcf3;
+}
+#turn-dialog .table-header { background: #f7dce5; }
+#turn-dialog .choose-card { background: #fcfcf3; }
+#turn-dialog .choose-card[aria-pressed="true"] { background: #f7e9ee; border-color: #a33d66; box-shadow: 0 0 0 1px #a33d66; }
+#turn-dialog #turn-result .cathy-board { background: #f2e8ec; }
+#turn-dialog .cathy-board-values strong { color: #a33d66; }
+#turn-dialog .card-art-zoom span { background: #4b2033; color: #fcfcf3; }
+.addylink-theme .game-lightbox.book-reader,
+html[data-theme] .addylink-theme .book-reader #lightbox-image { background: #f2e8ec; }
+@media (max-width: 700px) {
+  .association-brand-crop { max-width: 220px; }
+}
